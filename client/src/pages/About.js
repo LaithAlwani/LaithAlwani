@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import image from "../images/my-image.jpg";
-import resume from"../images/resume01.pdf";
+import resume from "../images/resume2021.pdf";
 
 const About = () => {
   return (
@@ -17,17 +17,16 @@ const About = () => {
         </p>
         <div className="text-left">
           <p>
-            I enjoy problem solving and taking on tough challenges and turning
-            into a simple clean solution. I have experience in Html, CSS,
-            JavaScript, jQuery and MERN Stack(Mongo, Express, REACT and Nodejs).
-          </p>
-          <p>
-            When I'm not coding or learning a new technology, you would find me
-            videogaming, playing music or kicking around a soccer ball.
+            Full stack web developer with Economics and HR backgrounds, Recently
+            earned a certificate in full stack development from Carleton
+            University, with newly developed skills in, React.js, JavaScript,
+            Html, CSS, MySQL, MongoDB and responsive web design.
           </p>
         </div>
         <div className="text-center">
-          <Link to={{pathname:resume}} className="btn" target="blank">Full Resume</Link>
+          <Link to={{ pathname: resume }} className="btn" target="blank">
+            Resume
+          </Link>
         </div>
       </article>
     </div>
