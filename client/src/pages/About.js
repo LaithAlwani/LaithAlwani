@@ -12,9 +12,6 @@ const About = () => {
       {/* <!-- About Me --> */}
       <article className="col-md-6 order-md-1 my-auto">
         <h2 className="text-center mb-4">&#60;About Me&#62;</h2>
-        <p className="font-weight-bold">
-          I am a full stack web develpoer from Ottawa, Ontairo.
-        </p>
         <div className="text-left">
           <p>
             Full stack web developer with Economics and HR backgrounds, Recently

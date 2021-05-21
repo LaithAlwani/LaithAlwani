@@ -43,7 +43,7 @@ function Footer() {
           </Link>
         </li>
       </ul>
-      <span className="small">Copyright © Laith Alwani 2020 - Ottawa,ON.</span>
+      <span className="small">© Laith Alwani 2020 - Ottawa,ON.</span>
     </footer>
   );
 }
