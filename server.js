@@ -11,15 +11,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(function(req, res, next) {
-
-  if (process.env.NODE_ENV != 'development' && !req.secure) {
-     return res.redirect("https://" + req.headers.host + req.url);
-  }
-
-  next();
-})
-
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
