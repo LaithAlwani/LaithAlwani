@@ -41,7 +41,7 @@ function Portfolio() {
 
   function handleBtnClick(event) {
     // Get the title of the clicked button
-    event.stopPropagation();
+    
     const btnName = event.target.getAttribute("data-value");
     console.log(event.target.getAttribute("data-value"));
     if (btnName === "next") {
@@ -55,7 +55,7 @@ function Portfolio() {
 
   return (
       <ProjectContext.Provider value={projectContext}>
-          <Project handleBtnClick={handleBtnClick}/>
+          <Project handleBtnClick={handleBtnClick} />
       </ProjectContext.Provider>
   );
 }
