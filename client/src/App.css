@@ -3,3 +3,8 @@
   color: white !important;
   margin: 0 0.5rem;
 }
+
+.img-fluid{
+  max-height: 100%;
+  max-width: 100%;
+}

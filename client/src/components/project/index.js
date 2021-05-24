@@ -9,7 +9,6 @@ function Project({ handleBtnClick }) {
   return (
     <>
       <div
-        id="carouselExampleControls"
         className="carousel slide"
         data-ride="carousel"
       >
@@ -51,7 +50,6 @@ function Project({ handleBtnClick }) {
               </Link>
             </div>
           </div>
-          <div class="carousel-caption d-none d-md-block"></div>
         </div>
         <a
           className="carousel-control-prev"

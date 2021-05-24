@@ -1,15 +1,3 @@
-
-.card {
-  margin: 3rem auto;
-  width: 40%;
-  border: none;
-  max-height: 100%;
-}
-
-ul {
-  list-style: none;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -17,6 +5,10 @@ ul {
   outline: black;
   background-size: 100%, 100%;
   background-image: none;
+}
+
+ul {
+  list-style: none;
 }
 
 .fa-arrow-left {
@@ -27,10 +19,4 @@ ul {
 .fa-arrow-right {
   font-size: 30px;
   color: black;
-}
-
-@media only screen and (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
 }
