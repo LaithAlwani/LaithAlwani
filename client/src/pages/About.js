@@ -17,7 +17,7 @@ const About = () => {
             Full stack web developer with Economics and HR backgrounds, Recently
             earned a certificate in full stack development from Carleton
             University, with newly developed skills in, React.js, JavaScript,
-            Html, CSS, MySQL, MongoDB and responsive web design.
+            HTML, CSS, MySQL, MongoDB and responsive web design.
           </p>
         </div>
         <div className="text-center">
