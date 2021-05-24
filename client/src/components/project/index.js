@@ -35,6 +35,7 @@ function Project({ handleBtnClick }) {
                 to={{ pathname: appLink }}
                 className="btn btn-sm"
                 target="_blank"
+                rel="noreferrer"
               >
                 APPLICATION
               </Link>
@@ -44,6 +45,7 @@ function Project({ handleBtnClick }) {
                 }}
                 className="btn btn-sm"
                 target="_blank"
+                rel="noreferrer"
               >
                 REPOSITORY
               </Link>
@@ -56,6 +58,7 @@ function Project({ handleBtnClick }) {
           role="button"
           data-value="previous"
           onClick={handleBtnClick}
+          aria-label="previous porject"
         >
           <span
             className="fas fa-arrow-left"
@@ -69,6 +72,7 @@ function Project({ handleBtnClick }) {
           role="button"
           data-value="next"
           onClick={handleBtnClick}
+          aria-label="next porject"
         >
           <span
             className="fas fa-arrow-right"
