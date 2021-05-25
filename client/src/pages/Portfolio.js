@@ -26,7 +26,7 @@ function Portfolio() {
                 <h2 className="mt-3">{project.title}</h2>
 
                 <Link
-                  to={`/project/${index}`}
+                  to={`/portfolio/${index}`}
                   className="btn btn-project"
                   aria-label="view project"
                 >
