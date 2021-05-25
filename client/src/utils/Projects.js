@@ -1,8 +1,8 @@
 import chatsrus from "../images/chatsrus.jpeg";
 import movieSearch from "../images/moiveSearch.png";
 import paletta from "../images/paletta.png";
-import weatherImage from "../images/weather.png";
-import workdaySheduler from "../images/calender.png";
+import weatherImage from "../images/weather-dashboard.png";
+import workdaySheduler from "../images/workday.png";
 const Projects = [
   {
     title: "Chats 'R' Us",

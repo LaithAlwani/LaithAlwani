@@ -6,6 +6,7 @@ import Footer from "./components/Footer/index";
 import loadable from "@loadable/component";
 const About = loadable(() => import("./pages/About"));
 const Portfolio = loadable(() => import("./pages/Portfolio"));
+const Project = loadable(() => import("./components/project/index"));
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Wrapper>
         <Navbar />
         <Route exact path="/" component={About} />
-        <Route path="/portfolio" component={Portfolio} />
+        <Route exact path="/portfolio" component={Portfolio} />
+        <Route path="/portfolio/:id" component={Project} />
       </Wrapper>
       <Footer />
     </Router>
