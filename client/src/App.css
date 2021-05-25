@@ -1,10 +1,54 @@
 .btn {
-  background-color: rgb(97, 97, 97) !important;
-  color: white !important;
+  background-color: rgb(97, 97, 97);
+  color: white;
   margin: 0 0.5rem;
 }
 
-.img-fluid{
-  max-height: 100%;
-  max-width: 100%;
+/* portfolio stylings */
+
+.project-container {
+  margin-bottom: 7rem;
+  padding: 0;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+}
+
+.project-container:hover .overlay {
+  opacity: 0.9;
+}
+
+.btn-project {
+  margin-top: 4rem;
+  color: black;
+  background-color: white;
+  
+  
+}
+.btn-project:hover{
+  color: rgb(94, 94, 94)
+}
+
+@media only screen and (max-width: 425px) {
+  .overlay{
+    opacity: 0.9;
+  }
+  .project-container {
+    margin-bottom: 2rem;
+  }
+}
+
+/* portfolio stylings ends */

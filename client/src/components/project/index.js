@@ -50,6 +50,7 @@ function Project({ handleBtnClick }) {
               </Link>
             </div>
           </div>
+
         </div>
         <a
           className="carousel-control-prev"
