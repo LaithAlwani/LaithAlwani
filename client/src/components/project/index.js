@@ -7,6 +7,10 @@ function Project() {
 
   return (
     <>
+      <Link to="/portfolio" className="btn btn-outline-secondary mb-3">
+        <span className="fas fa-arrow-left" aria-label="back"></span>
+      </Link>
+
       <div className="row">
         <div className="col-md-6">
           <img
@@ -27,31 +31,27 @@ function Project() {
               </div>
             ))}
           </div>
-
-          <Link
-            to={{ pathname: data.appLink }}
-            className="btn btn-sm"
-            target="_blank"
-            rel="noreferrer"
-          >
-            APPLICATION
-          </Link>
-          <Link
-            to={{
-              pathname: data.repoLink,
-            }}
-            className="btn btn-sm"
-            target="_blank"
-            rel="noreferrer"
-          >
-            REPOSITORY
-          </Link>
+          <div className="btn-group">
+            <Link
+              to={{ pathname: data.appLink }}
+              className="btn  btn-outline-secondary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              APPLICATION
+            </Link>
+            <Link
+              to={{
+                pathname: data.repoLink,
+              }}
+              className="btn btn-outline-secondary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              REPOSITORY
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="text-right">
-        <Link to="/portfolio" className="btn  mt-3">
-          <span className="fas fa-arrow-left" aria-label="back"></span>
-        </Link>
       </div>
     </>
   );

@@ -10,7 +10,7 @@ const About = () => {
         <img className="img-fluid p-3" src={image} alt="middle eastern man" />
       </div>
       {/* <!-- About Me --> */}
-      <article className="col-md-6 order-md-1 my-auto">
+      <div className="col-md-6 order-md-1 my-auto">
         <h2 className="text-center mb-4">&#60;About Me&#62;</h2>
         <div className="text-left">
           <p>
@@ -21,11 +21,11 @@ const About = () => {
           </p>
         </div>
         <div className="text-center">
-          <Link to={{ pathname: resume }} className="btn" target="blank">
+          <Link to={{ pathname: resume }} className="btn btn-secondary" target="blank">
             Resume
           </Link>
         </div>
-      </article>
+      </div>
     </div>
   );
 };

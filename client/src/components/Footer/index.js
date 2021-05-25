@@ -51,7 +51,7 @@ function Footer() {
           </Link>
         </li>
       </ul>
-      <span className="small">© Laith Alwani 2020 - Ottawa,ON.</span>
+      <span className="small">©2020 laithalwani@gmail.com - Ottawa,ON.</span>
     </footer>
   );
 }

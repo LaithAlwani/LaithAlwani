@@ -27,6 +27,7 @@ function Portfolio() {
                 <Link
                   to={{ pathname: `/portfolio/${index}`, state: { project } }}
                   className="btn btn-project"
+                  aria-label="view project"
                 >
                   View
                 </Link>
