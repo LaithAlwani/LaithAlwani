@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Project from "./components/project/index";
 
-if(window.location.href === "https://laithalwani.herokuapp.com"){
+if(window.location.href === "https://laithalwani.herokuapp.com/"){
   window.location.assign("https://www.laithalwani.ca");
 }
 
