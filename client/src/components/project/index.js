@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import Projects from "../../utils/Projects"
+import Projects from "../../utils/Projects";
 import "./style.css";
 
 function Project() {
@@ -9,8 +9,8 @@ function Project() {
 
   return (
     <>
-      <Link to="/portfolio" className="btn btn-outline-secondary mb-3">
-        <span className="fas fa-arrow-left" aria-label="back"></span>
+      <Link to="/portfolio" className="btn btn-outline-secondary mb-3" aria-label="back">
+        <span className="fas fa-arrow-left" ></span>
       </Link>
 
       <div className="row">
@@ -24,8 +24,7 @@ function Project() {
         <div className="col-md-6 text-center mt-3">
           <h1 className="mb-2">{project.title}</h1>
           <p>{project.description}</p>
-
-          <h6>Technlogies:</h6>
+          <p className="lead">Technlogies:</p>
           <div className="row">
             {project.technologies.map((tech, index) => (
               <div key={index} className="col-md-6">
@@ -39,6 +38,7 @@ function Project() {
               className="btn  btn-outline-secondary"
               target="_blank"
               rel="noreferrer"
+              aria-label="project link"
             >
               APPLICATION
             </Link>
@@ -49,6 +49,7 @@ function Project() {
               className="btn btn-outline-secondary"
               target="_blank"
               rel="noreferrer"
+              aria-label="repository link"
             >
               REPOSITORY
             </Link>
