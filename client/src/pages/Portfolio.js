@@ -7,13 +7,13 @@ function Portfolio() {
 
   useEffect(() => {
     setProjects(Projects);
-  }, [projects]);
+  }, []);
 
   return (
     <div className="text-center">
       <h1>Projects</h1>
       <div className="row mt-3">
-        {projects.map((project, index) => (
+        {projects?.map((project, index) => (
           <div key={index} className="col-lg-4 .offset-lg-4 col-md-6">
             <div className="project-container">
               <img
