@@ -4,9 +4,8 @@ import "./style.css";
 
 function Project() {
   const location = useLocation();
-  const pathname = location.pathname.split("/portfolio/");
+  const pathname = location.pathname.split("/project/");
   const project = Projects[pathname[1]];
-  console.log(project);
 
   return (
     <>
