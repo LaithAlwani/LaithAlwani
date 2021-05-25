@@ -1,9 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
+import Projects from "../../utils/Projects"
 import "./style.css";
 
 function Project() {
   const location = useLocation();
-  const data = location.state.project;
+  const pathname = location.pathname.split("/portfolio/");
+  const project = Projects[pathname[1]];
+  console.log(project);
 
   return (
     <>
@@ -14,18 +17,18 @@ function Project() {
       <div className="row">
         <div className="col-md-6">
           <img
-            src={data.image}
+            src={project.image}
             alt="Alt Description"
             className="card-img-top"
           />
         </div>
         <div className="col-md-6 text-center mt-3">
-          <h1 className="mb-2">{data.title}</h1>
-          <p>{data.description}</p>
+          <h1 className="mb-2">{project.title}</h1>
+          <p>{project.description}</p>
 
           <h6>Technlogies:</h6>
           <div className="row">
-            {data.technologies.map((tech, index) => (
+            {project.technologies.map((tech, index) => (
               <div key={index} className="col-md-6">
                 <p>{tech}</p>
               </div>
@@ -33,7 +36,7 @@ function Project() {
           </div>
           <div className="btn-group">
             <Link
-              to={{ pathname: data.appLink }}
+              to={{ pathname: project.appLink }}
               className="btn  btn-outline-secondary"
               target="_blank"
               rel="noreferrer"
@@ -42,7 +45,7 @@ function Project() {
             </Link>
             <Link
               to={{
-                pathname: data.repoLink,
+                pathname: project.repoLink,
               }}
               className="btn btn-outline-secondary"
               target="_blank"
