@@ -3,10 +3,10 @@ import "./App.css";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
-import loadable from "@loadable/component";
-const About = loadable(() => import("./pages/About"));
-const Portfolio = loadable(() => import("./pages/Portfolio"));
-const Project = loadable(() => import("./components/project/index"));
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Project from "./components/project/index";
+
 
 function App() {
   return (
