@@ -25,8 +25,8 @@ const Projects = [
     image: paletta,
     description: "A digital media company that produces educational apps",
     technologies: ["NodeJs","ExpressJs", "HTML", "CSS", "JavaScript", "UIKit"],
-    appLink: "https://laithalwani.github.io/movie-search",
-    repoLink: "https://github.com/LaithAlwani/movie-search",
+    appLink: "http://www.paletta-studio.com/",
+    repoLink: "https://github.com/LaithAlwani/paletta-studio",
   },
   {
     title: "Weather Dashboard",

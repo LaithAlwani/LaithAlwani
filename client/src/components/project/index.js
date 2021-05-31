@@ -9,17 +9,28 @@ function Project() {
 
   return (
     <>
-      <Link to="/portfolio" className="btn btn-outline-secondary mb-3" aria-label="back">
-        <span className="fas fa-arrow-left" ></span>
+      <Link
+        to="/portfolio"
+        className="btn btn-outline-secondary mb-3"
+        aria-label="back"
+      >
+        <span className="fas fa-arrow-left"></span>
       </Link>
 
       <div className="row">
         <div className="col-md-6">
-          <img
-            src={project.image}
-            alt="Alt Description"
-            className="card-img-top"
-          />
+          <Link
+            to={{ pathname: project.appLink }}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="project link"
+          >
+            <img
+              src={project.image}
+              alt="Alt Description"
+              className="card-img-top"
+            />
+          </Link>
         </div>
         <div className="col-md-6 text-center mt-3">
           <h1 className="mb-2">{project.title}</h1>

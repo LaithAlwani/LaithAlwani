@@ -1,5 +1,9 @@
 /* portfolio stylings */
 
+#my-image{
+  border-radius: 2.25rem;
+}
+
 .project-container {
   margin-bottom: 7rem;
   padding: 0;
@@ -30,7 +34,6 @@
   z-index: 1;
   
 }
-
 
 .project-img{
   width:100%;

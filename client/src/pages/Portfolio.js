@@ -12,7 +12,7 @@ function Portfolio() {
 
   return (
     <div className="text-center">
-      <h1>Projects</h1>
+      <h1 className="mb-5">Projects</h1>
       <div className="row mt-3">
         {projects.map((project, index) => (
           <div key={index} className="col-lg-4 .offset-lg-4 col-md-6">
