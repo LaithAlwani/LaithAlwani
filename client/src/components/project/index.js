@@ -5,8 +5,8 @@ import "./style.css";
 function Project() {
   const location = useLocation();
   const pathname = location.pathname.split("/portfolio/");
-  const project = Projects[pathname[1]];
-
+  const project = Projects.find(proj=> proj.pathname === pathname[1]);
+  
   return (
     <>
       <Link
@@ -20,30 +20,31 @@ function Project() {
       <div className="row">
         <div className="col-md-6">
           <Link
+          
             to={{ pathname: project.appLink }}
             target="_blank"
             rel="noreferrer"
             aria-label="project link"
           >
             <img
+            className="img-fluid"
               src={project.image}
               alt="Alt Description"
-              className="card-img-top"
+              
             />
           </Link>
         </div>
         <div className="col-md-6 text-center mt-3">
           <h1 className="mb-2">{project.title}</h1>
           <p>{project.description}</p>
-          <p className="lead">Technlogies:</p>
           <div className="row">
             {project.technologies.map((tech, index) => (
-              <div key={index} className="col-md-6">
-                <p>{tech}</p>
+              <div key={index} className="col-3">
+                <img className="img-fluid p-3" src={tech} alt="" /> 
               </div>
             ))}
           </div>
-          <div className="btn-group">
+          <div className="btn-group mt-3">
             <Link
               to={{ pathname: project.appLink }}
               className="btn  btn-outline-secondary"

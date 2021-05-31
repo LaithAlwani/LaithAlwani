@@ -6,7 +6,6 @@ function Portfolio() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    console.log("im here");
     setProjects(Projects);
   }, []);
 
@@ -26,7 +25,7 @@ function Portfolio() {
                 <h2 className="mt-3">{project.title}</h2>
 
                 <Link
-                  to={`/portfolio/${index}`}
+                  to={`/portfolio/${project.pathname}`}
                   className="btn btn-project"
                   aria-label="view project"
                 >
