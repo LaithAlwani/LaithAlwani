@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
-import Project from "./components/project/index";
 
 if(window.location.href === "https://laithalwani.herokuapp.com/"){
   window.location.assign("https://www.laithalwani.ca");
@@ -18,7 +17,6 @@ function App() {
         <Navbar />
         <Route exact path="/" component={About} />
         <Route exact path="/portfolio" component={Portfolio} />
-        <Route path="/portfolio/:id" component={Project} />
       </Wrapper>
       <Footer />
     </Router>
