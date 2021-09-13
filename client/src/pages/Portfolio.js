@@ -15,7 +15,7 @@ function Portfolio() {
       <div className="row mt-3">
         {projects.map((project, index) => (
           <div key={index} className="col-lg-4 col-md-6">
-            <div className="project-container">
+            <div className="project-container p-3">
               <div className="image-container">
                 <Link
                   to={{ pathname: project.appLink }}
@@ -35,8 +35,8 @@ function Portfolio() {
                 <h2 className="mt-3">{project.title}</h2>
                 <div className="row">
                   {project.technologies.map((tech, index) => (
-                    <div key={index} className="col-4">
-                      <img className="img-fluid p-4" src={tech} alt="" />
+                    <div key={index} className="col-2 p-0">
+                      <img className="img-fluid p-2" src={tech} alt="" />
                     </div>
                   ))}
                 </div>
