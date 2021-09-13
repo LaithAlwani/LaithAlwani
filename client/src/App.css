@@ -7,9 +7,15 @@
   align-items: center; */
 }
 
+.align-content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 #my-image{
-  border-radius: 50%;
+  border-radius:2rem;
 }
 
 .project-container {

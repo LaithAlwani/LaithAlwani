@@ -17,38 +17,36 @@ function Portfolio() {
           <div key={index} className="col-lg-4 col-md-6">
             <div className="project-container">
               <div className="image-container">
-                <img
-                  className="project-img"
-                  src={project.image}
-                  alt={project.title}
-                />
+                <Link
+                  to={{ pathname: project.appLink }}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="project link"
+                >
+                  <img
+                    className="project-img"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </Link>
               </div>
-              
-                <div className="">
-                  <h2 className="mt-3">{project.title}</h2>
-                  <div className="row">
-                    {project.technologies.map((tech, index) => (
-                      <div key={index} className="col-3">
-                        <img className="img-fluid p-3" src={tech} alt="" />
-                      </div>
-                    ))}
-                  </div>
-                
+
+              <div className="">
+                <h2 className="mt-3">{project.title}</h2>
+                <div className="row">
+                  {project.technologies.map((tech, index) => (
+                    <div key={index} className="col-4">
+                      <img className="img-fluid p-4" src={tech} alt="" />
+                    </div>
+                  ))}
+                </div>
+
                 <div className="btn-group mt-3">
-                  <Link
-                    to={{ pathname: project.appLink }}
-                    className="btn  btn-outline-secondary"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="project link"
-                  >
-                    APPLICATION
-                  </Link>
                   <Link
                     to={{
                       pathname: project.repoLink,
                     }}
-                    className="btn btn-outline-secondary"
+                    className="btn btn-secondary"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="repository link"
