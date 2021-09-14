@@ -33,11 +33,11 @@ function Portfolio() {
 
               <div className="">
                 <h2 className="mt-3">{project.title}</h2>
-                <div className="row">
+                <div >
                   {project.technologies.map((tech, index) => (
-                    <div key={index} className="col-2 p-0">
-                      <img className="img-fluid p-2" src={tech} alt="" />
-                    </div>
+                    <span key={index} >
+                      <img  src={tech} alt="" className="tech-icons"/>
+                    </span>
                   ))}
                 </div>
 

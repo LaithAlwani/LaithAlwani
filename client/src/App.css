@@ -21,7 +21,11 @@
 .project-container {
   margin-bottom: 2rem;
   padding: 0;
-  transition: 0.3s;
+  text-align: center;
+}
+.tech-icons{
+  width:50px;
+  padding: 0.5rem;
 }
 
 .image-container{
