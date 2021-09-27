@@ -1,39 +1,43 @@
+import { useState } from "react";
 import "./style.css";
-import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
-  const location = useLocation();
+export default function Navbar() {
+  const [location, setLocation] = useState("about-me");
+  const handleClick = (loc) => {
+    setLocation(loc)
+  }
+  
   return (
-    <nav className="navbar navbar-expand navbar-light">
-      <Link to="/" className="navbar-brand">
-        Laith Alwani
-      </Link>
+    <nav className="navbar navbar-expand navbar-light sticky-top">
+      <div className="navbar-brand">Laith Alwani</div>
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link
-            to="/"
+          <a
+            href="#about-me"
             className={
-              location.pathname === "/" ? "nav-link active" : "nav-link"
-            }
-          >
-            About
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
-            to="/portfolio"
-            className={
-              location.pathname === "/portfolio"
+              location === "about-me"
                 ? "nav-link active"
                 : "nav-link"
             }
+            onClick={()=>handleClick("about-me")}
+          >
+            About
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            href="#portfolio"
+            className={
+              location === "portfolio"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            onClick={()=>handleClick("portfolio")}
           >
             Portfolio
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>
   );
 };
-
-export default Navbar;

@@ -1,7 +1,15 @@
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+
 footer ul {
     margin: 0 ;
 }
-footer .fa-github-square {
+footer .fa-github {
   color: black;
 }
 

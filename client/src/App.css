@@ -1,31 +1,22 @@
 /* portfolio stylings */
-#about{
-  height: 80vh;
-  /* margin: 2rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
+
+html{
+  scroll-behavior: smooth;
+}
+.content-height{
+  min-height: 95vh;
 }
 
 .align-content{
   display:flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 
 #my-image{
   border-radius:2rem;
-}
-
-.project-container {
-  margin-bottom: 2rem;
-  padding: 0;
-  text-align: center;
-}
-.tech-icons{
-  width:50px;
-  padding: 0.5rem;
 }
 
 .image-container{
@@ -41,4 +32,10 @@
   max-height: 300px;
   border-radius: 2rem;
 }
+.tech-icons{
+  width:50px;
+  padding: 0.5rem;
+}
+
+
 /* portfolio stylings ends */
