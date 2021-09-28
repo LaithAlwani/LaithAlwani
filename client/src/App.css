@@ -1,7 +1,19 @@
 /* portfolio stylings */
 
-html{
+html,body{
   scroll-behavior: smooth;
+  animation-name: example;
+  animation-duration: 5s;
+}
+
+.intro{
+  color: lightgray;
+  text-shadow: gray 3px 3px ;
+  position: fixed;
+  top:0;
+  left:calc(50% - (550px / 2));
+  font-size: 5rem;
+  text-align: center;
 }
 .content-height{
   min-height: 95vh;
@@ -17,6 +29,7 @@ html{
 
 #my-image{
   border-radius:2rem;
+  
 }
 
 .image-container{
@@ -37,5 +50,10 @@ html{
   padding: 0.5rem;
 }
 
+
+@keyframes example {
+  from {background-color: black;}
+  to {background-color: white;}
+}
 
 /* portfolio stylings ends */

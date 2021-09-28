@@ -11,11 +11,12 @@
   position: relative;
   outline: none;
 }
+
 .navbar {
-  padding: 0 ;
   font-weight: 500;
-  margin: 1rem 0 ;
-  background-color: white;
+  margin:  0 ;
+  /* background-color: inherit; */
+  
 }
 .navbar-light .navbar-nav .nav-link{
   color:rgb(109, 109, 109) ;

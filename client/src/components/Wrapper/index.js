@@ -3,15 +3,15 @@ import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./style.css";
 
-function Wrapper({children}) {
+function Wrapper({ children }) {
   return (
     <>
-    <main className="wrapper container text-center">
-      <Navbar />
-      {children}
+      <main className="wrapper text-center">
+        <Navbar />
+        <div className="container">{children}</div>
       </main>
       <Footer />
-      </>
+    </>
   );
 }
 

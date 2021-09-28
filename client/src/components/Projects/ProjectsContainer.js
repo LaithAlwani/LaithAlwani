@@ -12,7 +12,7 @@ export default function ProjectsContainer() {
         <h2 className="mb-2">Projects</h2>
         <div className="row">
           {projects.map((project, index) => (
-            <div key={index} className="col-lg-4 col-md-6 align-content">
+            <div key={index} className="col-lg-4 col-md-6 align-content ">
               <div className="mb-4">
                 <ProjectImage
                   image={project.image}
