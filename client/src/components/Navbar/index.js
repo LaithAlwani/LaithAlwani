@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand navbar-light sticky-top" data-aos="fade-down">
       <div className="container">
-        <div className="navbar-brand">Laith Alwani</div>
+        <div className="navbar-brand "><a href="#about-me">Laith Alwani</a></div>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <a

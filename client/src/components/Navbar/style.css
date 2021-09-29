@@ -22,6 +22,15 @@
   color:rgb(109, 109, 109) ;
 }
 
+.navbar-brand a{
+  color:black
+  
+}
+
+.navbar-brand a:hover{
+  text-decoration: none;
+}
+
 .nav-item:before {
   content: "";
   position: absolute;
