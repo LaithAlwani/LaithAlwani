@@ -4,7 +4,7 @@ import "./style.css";
 
 export default function Footer() {
   return (
-    <footer className="text-center animate__animated animate__fadeInUp animate__delay-1s">
+    <footer className="text-center " data-aos="fade-up">
       <ul className="list-inline mt-2">
         <SocialLink
           path="https://github.com/LaithAlwani"

@@ -15,7 +15,7 @@
 .navbar {
   font-weight: 500;
   margin:  0 ;
-  /* background-color: inherit; */
+  background-color: white;
   
 }
 .navbar-light .navbar-nav .nav-link{

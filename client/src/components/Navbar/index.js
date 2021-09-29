@@ -8,7 +8,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand navbar-light sticky-top animate__animated animate__fadeInDown animate__delay-1s">
+    <nav className="navbar navbar-expand navbar-light sticky-top" data-aos="fade-down">
       <div className="container">
         <div className="navbar-brand">Laith Alwani</div>
         <ul className="navbar-nav ml-auto">

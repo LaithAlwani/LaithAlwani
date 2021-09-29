@@ -2,17 +2,27 @@ import "./App.css";
 import Wrapper from "./components/Wrapper";
 import AboutMeContainer from "./components/AboutMe/AboutMeContainer";
 import ProjectsContainer from "./components/Projects/ProjectsContainer";
-import "animate.css"
-import Test from "./components/Test";
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 if (window.location.href === "https://laithalwani.herokuapp.com/") {
   window.location.assign("https://www.laithalwani.ca");
 }
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({ offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+      once: true
+    });
+  },[])
   return (
     <Wrapper>
-      <Test />
+      
       <AboutMeContainer />
       <ProjectsContainer />
     </Wrapper>

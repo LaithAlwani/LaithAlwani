@@ -1,6 +1,6 @@
 export default function MyImage() {
   return (
-    <div className=" col-md-6 order-md-2 animate__animated animate__fadeInRight animate__delay-1s">
+    <div className=" col-md-6 order-md-2" data-aos="fade-left">
       <img
         className="img-fluid p-3"
         src="/images/myImage.png"

@@ -1,7 +1,6 @@
-import "animate.css"
 export default function AboutMeContent() {
   return (
-    <div className="col-md-6 order-md-1 animate__animated animate__fadeInLeft animate__delay-1s">
+    <div className="col-md-6 order-md-1" data-aos="flip-right">
       <div className="align-content">
         <div>
           <h2 className=" mb-4">&#60;About Me&#62;</h2>
