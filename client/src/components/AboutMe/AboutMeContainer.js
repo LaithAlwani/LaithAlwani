@@ -1,6 +1,5 @@
 import AboutMe from "./AboutMeContent";
 import MyImage from "./MyImage";
-import ProjectsContainer from "../Projects/ProjectsContainer";
 
 export default function AboutMeContainer() {
   return (

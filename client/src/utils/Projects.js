@@ -9,6 +9,9 @@ const node = "/icons/node.png";
 const react = "/icons/react.png";
 const sequelize = "/icons/sequelize.png";
 const express = "/icons/exjs.png";
+const firebase = "/icons/firebase.png";
+const mui = "/icons/mui.png";
+
 
 const Projects = [
   {
@@ -16,9 +19,9 @@ const Projects = [
     pathname: "chatsrus",
     image: "/images/chatsrus.jpeg",
     description: "Real time chat app",
-    technologies: [node, express, sequelize, bootstrap, javaScript, handlebars],
-    appLink: "https://group-3-project-2.herokuapp.com",
-    repoLink: "https://github.com/mich3ll3e/Group-3-Project-2",
+    technologies: [react, firebase, mui],
+    appLink: "https://chats-r-us.firebaseapp.com/",
+    repoLink: "https://github.com/LaithAlwani/react-ChatRUs",
   },
   {
     title: "My Team",
