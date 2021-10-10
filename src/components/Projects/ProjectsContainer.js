@@ -1,8 +1,8 @@
-import { useState } from "react";
-import ProjectContent from "./ProjectContent";
-import ProjectImage from "./ProjectImage";
-import ProjectRepoBtn from "./ProjectRepoBtn";
-import Projects from "../../utils/Projects";
+import { useState, lazy } from "react";
+import Projects from "../../utils/Projects"
+const ProjectContent = lazy(()=> import("./ProjectContent"))
+const ProjectImage = lazy(()=> import("./ProjectImage"))
+const ProjectRepoBtn = lazy(()=> import("./ProjectRepoBtn"))
 
 export default function ProjectsContainer() {
   const [projects] = useState(Projects);
