@@ -3,7 +3,7 @@ export default function MyImage() {
     <div className=" col-md-6 order-md-2" data-aos="fade-left">
       <img
         className="img-fluid p-3"
-        src="/images/myImage.png"
+        src="/images/myImage.avif"
         alt="middle eastern man"
         id="my-image"
       />
