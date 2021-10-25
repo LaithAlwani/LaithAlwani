@@ -11,10 +11,10 @@ export default function AboutMeContent() {
             HTML, CSS, MySQL, MongoDB and responsive web design.
           </p>
           <a
-            href=  "/resume2021.pdf" 
+            href=  "./resume.pdf" 
             className="btn btn-secondary mt-2"
-            target="blank"
-            // rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             Resume
           </a>

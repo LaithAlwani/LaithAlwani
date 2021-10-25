@@ -4,7 +4,7 @@ export default function MyImage() {
       <img
         className="img-fluid p-3"
         src="/images/myImage.avif"
-        alt="middle eastern man"
+        alt="Laith Alwani"
         id="my-image"
       />
     </div>
