@@ -15,16 +15,24 @@
 .about{
   display: flex;
   text-align: center;
+  width: clamp(400px, 75%, 1200);
 }
 
 .about img{
   width: 300px;
   margin:2rem;
   border-radius: 1rem;
+  
+}
+.about div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .about p{
-  margin-bottom: 2rem;
-  padding: 0 2rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
 }
 
 .about a{
@@ -38,10 +46,11 @@
   .about {
     width: 100%;
     flex-direction: column;
+    margin-top: 1rem;
     
   }
   .about img{
     margin: 0 auto;
-  }
+  } 
 
 } 

@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Head>
         <title>Laith Alwani</title>
         <meta name="description" content="My Portifolio" />
@@ -12,7 +12,9 @@ export default function Home() {
       </Head>
 
       <div className={styles.about}>
-        <img src="/images/my-image.png" alt="Laith Alwani" id="my-image" />
+        
+          <img src="/images/my-image.png" alt="Laith Alwani" id="my-image" />
+        
 
         <div>
           <h2>&#60;About Me&#62;</h2>
