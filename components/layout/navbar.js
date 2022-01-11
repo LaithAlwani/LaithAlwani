@@ -5,20 +5,17 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav>
-      <Link href="/">
-        {/* <h3 >LA</h3> */}
-        <a className="logo">
-          <Image
-            src="/images/my-image.png"
-            width={32}
-            height={32}
-            alt="logo"
-          />
-        </a>
-      </Link>
-      {/* <Link href="/">
-        <a>About</a>
+      <div className="logo">
+        {/* <Link href="/">
+        {/* <h3 >LA</h3> 
+        <a className="logo"> */}
+        <Image src="/images/my-image.png" width={64} height={64} alt="logo" />
+        {/* </a>
       </Link> */}
+      </div>
+      <Link href="/">
+        <a>About</a>
+      </Link>
       <Link href="/portfolio">
         <a>Portfolio</a>
       </Link>

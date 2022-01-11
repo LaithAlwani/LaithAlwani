@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   background: #f2f2f2;
   color: #333;
@@ -11,31 +15,43 @@ a {
   text-decoration: none;
 }
 
+#main{
+  width: 960px;
+  margin: 0 auto;
+}
+
 nav{
+  position: relative;
   display: flex;
   justify-content: end;
   align-items: flex-end;
-  padding: 0 1rem ;
+  padding: 5px 10px ;
   border-bottom: 1px solid #ddd;
 }
 nav a{
   margin-left: 1rem;
+  padding-bottom: 5px;
 }
 
 nav .logo{
   margin-right: auto ;
-  padding: 0.25rem;
+  /* padding-top: 1rem; */
+  /* position: absolute;
+  top:0;
+  left:0;
+  padding: 10px; */
 }
 
 .content{
-  min-height: 82vh;
-  width: 960px;
+  min-height: 75vh;
   margin: 0 auto;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+
 
 footer{
   text-align: center;
@@ -60,10 +76,11 @@ footer ul img{
 
 footer span{
   display: block;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 900px) {
-  .content {
+  #main {
     width: 100%;
   }
 }
