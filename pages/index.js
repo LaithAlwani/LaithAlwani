@@ -12,9 +12,16 @@ export default function Home() {
       </Head>
 
       <div className={styles.about}>
-        
-          <img src="/images/my-image.png" alt="Laith Alwani" id="my-image" />
-        
+        <div className={styles.imgContainer}>
+          <Image
+            src="/images/my-image.png"
+            alt="Laith Alwani"
+            id="my-image"
+            // layout="responsive"
+            width={900}
+            height={900}
+          />
+        </div>
 
         <div>
           <h2>&#60;About Me&#62;</h2>
@@ -24,7 +31,12 @@ export default function Home() {
             Carleton University. As a student I learned React.js, JavaScript,
             HTML, CSS, MySQL, MongoDB and responsive web design.
           </p>
-          <a href="./resume.pdf" target="_blank" rel="noreferrer">
+          <a
+            href="./resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="btn"
+          >
             Resume
           </a>
         </div>

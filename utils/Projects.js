@@ -13,6 +13,7 @@ const mui = "/icons/mui.png";
 
 const Projects = [
   {
+    id:1,
     title: "Score Renovations",
     pathname: "score-renovations",
     image: "/images/score.png",
@@ -23,6 +24,7 @@ const Projects = [
     repoLink: "https://github.com/LaithAlwani/score-renovation",
   },
   {
+    id:2,
     title: "Chats 'R' Us",
     pathname: "chatsrus",
     image: "/images/chatsRUs.png",
@@ -32,6 +34,7 @@ const Projects = [
     repoLink: "https://github.com/LaithAlwani/react-ChatRUs",
   },
   {
+    id:3,
     title: "My Team",
     pathname: "my-team",
     image: "/images/my-team.png",
