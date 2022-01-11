@@ -6,15 +6,34 @@ export default function Project({ project }) {
   return (
     <div className={styles.root}>
       <div>
-        <a className="btn" href={appLink}>
+        <a
+          className="btn"
+          href={appLink}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           {title}
         </a>
       </div>
-      <Image src={image} alt={title} width={375} height={375} />
+      <Image src={image} alt={title} width={375} height={375} priority />
       <div>
-        <a href={repoLink} className="btn">
+        <a
+          href={repoLink}
+          className="btn"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Repo
         </a>
+      </div>
+      <div>
+        <ul>
+          {technologies.map((tech, i) => (
+            <li key={i}>
+              <Image src={tech} alt="" width={48} height={48} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

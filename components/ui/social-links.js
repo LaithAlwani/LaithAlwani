@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function SocialLink({ path, label, icon }) {
   return (
@@ -9,7 +10,7 @@ export default function SocialLink({ path, label, icon }) {
           rel="noreferrer"
           aria-label={label}
         >
-          <img src={icon} alt="social link" />
+          <Image src={icon} alt="social link" width={32} height={32}/>
         </a>
       </Link>
     </li>
