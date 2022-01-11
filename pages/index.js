@@ -19,7 +19,7 @@ export default function Home() {
             id="my-image"
             // layout="responsive"
             width={900}
-            height={900}
+            height={800}
           />
         </div>
 

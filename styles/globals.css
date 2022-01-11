@@ -28,7 +28,7 @@ img{
 nav{
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: flex-end;
   padding: 5px 10px ;
   border-bottom: 1px solid #ddd;
