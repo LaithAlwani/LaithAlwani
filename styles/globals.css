@@ -30,7 +30,7 @@ nav{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 5px 10px ;
+  padding: 10px ;
   border-bottom: 1px solid #ddd;
 }
 nav a{
@@ -40,11 +40,11 @@ nav a{
 
 nav .logo{
   margin-right: auto ;
-  /* padding-top: 1rem; */
-  /* position: absolute;
-  top:0;
-  left:0;
-  padding: 10px; */
+}
+
+nav .logo a{
+  margin: 0;
+  padding: 0;
 }
 
 .content{
@@ -135,9 +135,13 @@ footer span{
   left: 2px;
 }
 
- @media (max-width: 768px) {
-  .btn {
-    padding: .75rem 3rem;
-    font-size: 1.25rem;
-  }
- }
+.active:after{
+  bottom: 2px;
+  left: 2px;
+}
+
+.link{
+  max-width: 75px;
+  line-height: 1rem;
+  padding: 0.5rem;
+}

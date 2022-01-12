@@ -7,7 +7,7 @@ export default function Project({ project }) {
     <div className={styles.root}>
       <div>
         <a
-          className="btn"
+          className="btn title"
           href={appLink}
           rel="noopener noreferrer"
           target="_blank"
