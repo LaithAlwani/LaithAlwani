@@ -9,6 +9,7 @@ export default function SocialLink({ path, label, icon }) {
           target="_blank"
           rel="noreferrer"
           aria-label={label}
+          className="btn social-link"
         >
           <Image src={icon} alt="social link" width={32} height={32}/>
         </a>

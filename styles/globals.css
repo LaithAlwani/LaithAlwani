@@ -77,8 +77,13 @@ footer ul {
 }
 
 footer ul img {
-  width: 2rem;
-  margin: 0.2rem;
+  background-color: #969696;
+}
+
+footer ul a {
+  /* width: 2rem; */
+  /* margin: 0.3rem; */
+  margin: 0 1rem;
 }
 
 footer span {
@@ -147,3 +152,12 @@ footer span {
   line-height: 1rem;
   padding: 0.5rem;
 }
+
+.social-link{
+  width:64px;
+  padding:  0.25rem 0;
+  font-size: 3rem;
+  margin:0 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
