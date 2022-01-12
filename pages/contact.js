@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/contact.module.css";
 
-export default function contact() {
+export default function Contact() {
   const [request, setRequest] = useState({
     name: "",
     email: "",
