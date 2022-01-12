@@ -8,6 +8,8 @@ export default function Contact() {
     message: "",
   });
 
+  const [success, setSuccess] = useState("")
+
   const handleChange = (e) => {
     console.log(e.target.name);
     setRequest({ ...request, [e.target.name]: e.target.value });
@@ -15,7 +17,11 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(request);
+    setRequest({name:"", email:"", message:""})
+    setSuccess("Request Sent! Thank you");
+    setTimeout(()=>{
+      setSuccess("")
+    },2000)
   };
   return (
     <form
@@ -24,7 +30,8 @@ export default function Contact() {
       autoComplete="off"
       noValidate
     >
-      <h1>Contact us</h1>
+      {success && <div className={styles.success}>{success}</div>}
+      <h1>Contact Us</h1>
       <div>
         <label htmlFor="name">Name:</label>
         <input
