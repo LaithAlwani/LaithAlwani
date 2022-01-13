@@ -43,12 +43,15 @@ nav a {
 
 nav .logo {
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 nav .logo a {
   margin: 0;
   padding: 0;
 }
+
 
 .content {
   min-height: 75vh;
