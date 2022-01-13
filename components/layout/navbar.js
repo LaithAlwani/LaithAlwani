@@ -11,7 +11,6 @@ export default function Navbar() {
     <nav>
       <div className="logo">
         <Link href="/">
-          {/* <span className="logo-icon">LA</span>  */}
           <a>
             <Image
               src="/images/logo.png"

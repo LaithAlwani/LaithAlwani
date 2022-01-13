@@ -26,10 +26,11 @@ export default function Home() {
         <div>
           <h2>&#60;About Me&#62;</h2>
           <p>
-            Full stack web developer with a background in economics and HR. I
-            recently earned a certificate in full stack development from
-            Carleton University. As a student I learned React.js, JavaScript,
-            HTML, CSS, MySQL, MongoDB and responsive web design.
+            Full stack web developer with a background in economics and HR with
+            2+ years of experiance and a certificate in full stack
+            development from Carleton University. I have experiance in Next.js
+            React.js, JavaScript, HTML, CSS, MySQL, MongoDB and responsive web
+            design.
           </p>
           <a
             href="./resume.pdf"
