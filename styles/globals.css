@@ -143,16 +143,9 @@ footer span {
   left: 2px;
 }
 
-.link {
+.nav-link {
   max-width: 75px;
   line-height: 1rem;
   padding: 0.5rem;
-}
-
-.social-link{
-  width:64px;
-  padding:  0.25rem 0;
-  margin:0 0.25rem;
-  margin-bottom: 0.5rem;
 }
 
