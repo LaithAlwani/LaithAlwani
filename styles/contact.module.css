@@ -3,6 +3,9 @@
   height: auto;
   padding: 1rem;
 }
+.form >*{
+  margin-bottom: 0.3rem;
+}
 .form input {
   line-height: 30px;
 }

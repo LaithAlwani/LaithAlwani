@@ -8,7 +8,7 @@ export default function Contact() {
     message: "",
   });
 
-  const [success, setSuccess] = useState("")
+  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     console.log(e.target.name);
@@ -17,11 +17,11 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setRequest({name:"", email:"", message:""})
+    setRequest({ name: "", email: "", message: "" });
     setSuccess("Request Sent! Thank you");
-    setTimeout(()=>{
-      setSuccess("")
-    },2000)
+    setTimeout(() => {
+      setSuccess("");
+    }, 2000);
   };
   return (
     <form
@@ -33,35 +33,36 @@ export default function Contact() {
       {success && <div className={styles.success}>{success}</div>}
       <h1>Contact Us</h1>
       <div>
-        <label htmlFor="name">Name:</label>
+        {/* <label htmlFor="name">Name:</label> */}
         <input
           type="text"
           name="name"
+          placeholder="Name"
           value={request.name}
           onChange={handleChange}
-          
         />
       </div>
       <div>
-        <label htmlFor="email">Email:</label>
+        {/* <label htmlFor="email">Email:</label> */}
         <input
           type="text"
           name="email"
+          placeholder="Email"
           value={request.email}
           onChange={handleChange}
-          
         />
       </div>
       <div>
-        <label htmlFor="message">Message:</label>
+        {/* <label htmlFor="message">Message:</label> */}
         <textarea
           type="text"
           name="message"
+          placeholder="Messsage"
           value={request.message}
           onChange={handleChange}
-          
         />
       </div>
+
       <button type="submit" className="btn">
         Submit
       </button>

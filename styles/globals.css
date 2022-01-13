@@ -63,7 +63,7 @@ nav .logo a {
 footer {
   text-align: center;
   border-top: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 10px 0 0;
   margin-top: 20px;
   color: #777;
 }
@@ -76,13 +76,7 @@ footer ul {
   justify-content: center;
 }
 
-footer ul img {
-  background-color: #969696;
-}
-
 footer ul a {
-  /* width: 2rem; */
-  /* margin: 0.3rem; */
   margin: 0 1rem;
 }
 
@@ -98,10 +92,9 @@ footer span {
 }
 
 .btn {
-  background-color: #969696;
+  background-color: #a7a7a7;
   border: 0 solid #e5e7eb;
   box-sizing: border-box;
-  color: #000000;
   display: flex;
   font-size: 1rem;
   font-weight: 700;
@@ -111,7 +104,7 @@ footer span {
   margin-top: 0.5rem;
   position: relative;
   text-align: center;
-  text-decoration: none #000000 solid;
+  text-decoration: none #333 solid;
   text-decoration-thickness: auto;
   width: 100%;
   max-width: 275px;
@@ -130,7 +123,7 @@ footer span {
 .btn:after {
   content: "";
   position: absolute;
-  border: 1px solid #000000;
+  border: 1px solid #333;
   bottom: 4px;
   left: 4px;
   width: calc(100% - 1px);
@@ -156,7 +149,6 @@ footer span {
 .social-link{
   width:64px;
   padding:  0.25rem 0;
-  font-size: 3rem;
   margin:0 0.25rem;
   margin-bottom: 0.5rem;
 }

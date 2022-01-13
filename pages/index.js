@@ -17,7 +17,7 @@ export default function Home() {
             src="/images/my-image.png"
             alt="Laith Alwani"
             id="my-image"
-            // layout="responsive"
+            priority
             width={900}
             height={800}
           />
