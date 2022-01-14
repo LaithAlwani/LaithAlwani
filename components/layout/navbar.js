@@ -11,14 +11,14 @@ export default function Navbar() {
     <nav>
       <div className="logo">
         <Link href="/">
-          <a>
+          
             <Image
-              src="/images/logo.png"
-              width={64}
-              height={64}
+              src="/images/Logo-96dpi.png"
+              width={96}
+              height={96}
               alt="logo"
             />
-          </a>
+          
         </Link>
       </div>
       <Link href="/">

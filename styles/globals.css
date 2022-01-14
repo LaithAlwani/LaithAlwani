@@ -32,7 +32,7 @@ nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
@@ -141,10 +141,11 @@ footer span {
 .active:after {
   bottom: 2px;
   left: 2px;
+  transform: none;
 }
 
 .nav-link {
-  max-width: 75px;
+  max-width: 85px;
   line-height: 1rem;
   padding: 0.5rem;
 }
