@@ -30,8 +30,9 @@ export default function Portfolio() {
         alt=""
         onClick={() => cycleProject("prev")}
         className={styles.prev}
+        
       />
-      <Project project={projects[projectIndex]} />
+      <Project project={projects[projectIndex]} cycleProject={cycleProject} />
       
         <img
           src="/images/next-page.png"

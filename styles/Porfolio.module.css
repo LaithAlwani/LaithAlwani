@@ -6,19 +6,19 @@
 }
 .prev {
   transform: rotate(180deg);
-  
+  margin-right: 1rem;
   opacity: 0.3
 }
 .next {
- 
+ margin-left: 1rem;
   opacity: 0.3;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .prev {
-    left: 0;
+    display: none;
   }
   .next {
-    right: 0;
+    display: none;
   }
 }
