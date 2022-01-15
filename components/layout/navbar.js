@@ -11,30 +11,38 @@ export default function Navbar() {
     <nav>
       <div className="logo">
         <Link href="/">
-          
+          <a>
             <Image
               src="/images/Logo-96dpi.png"
               width={96}
               height={96}
               alt="logo"
             />
-          
+          </a>
         </Link>
       </div>
       <Link href="/">
-        <a className={pathname === "/" ? "btn nav-link active" : "btn nav-link"}>
+        <a
+          className={pathname === "/" ? "btn nav-link active" : "btn nav-link"}
+        >
           About
         </a>
       </Link>
       <Link href="/portfolio">
         <a
-          className={pathname === "/portfolio" ? "btn nav-link active" : "btn nav-link"}
+          className={
+            pathname === "/portfolio" ? "btn nav-link active" : "btn nav-link"
+          }
         >
           Portfolio
         </a>
       </Link>
       <Link href="/contact">
-        <a className={pathname === "/contact" ? "btn nav-link active" : "btn nav-link"}>
+        <a
+          className={
+            pathname === "/contact" ? "btn nav-link active" : "btn nav-link"
+          }
+        >
           Contact
         </a>
       </Link>
