@@ -1,4 +1,4 @@
-User-agnet: *
+User-agent: *
 Allow: /
 Disallow: /cgi-bin/
 Sitemap: https://www.laithalwani.ca/sitemap.xml

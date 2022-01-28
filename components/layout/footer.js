@@ -3,10 +3,6 @@ import SocialLink from "../ui/social-links";
 
 export default function Footer() {
   return (
-    // <footer>
-    //   <p>© 2021 Laith Alwani</p>
-    // </footer>
-
     <footer>
       <ul>
         <SocialLink
