@@ -16,9 +16,9 @@
 
 @media only screen and (max-width: 768px) {
   .prev {
-    display: none;
+    display: none !important;
   }
   .next {
-    display: none;
+    display: none !important;
   }
 }

@@ -32,8 +32,8 @@ nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  padding: 10px;
+  align-items: center;
+  padding: 10px 10px 0;
   border-bottom: 1px solid #ddd;
 }
 nav a {
