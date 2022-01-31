@@ -1,7 +1,7 @@
 import styles from "./project.module.css";
 import Image from "next/image";
 
-export default function Project({ project, cycleProject}) {
+export default function Project({ project}) {
   const { title, image, technologies, appLink, repoLink } = project;
   return (
     <div className={styles.root}>
@@ -15,7 +15,7 @@ export default function Project({ project, cycleProject}) {
           {title}
         </a>
       </div>
-      <Image src={image} alt={title} width={375} height={375} priority onTouchEnd={()=>cycleProject("next")} />
+      <Image src={image} alt={title} width={375} height={375} priority />
       <div>
         <a
           href={repoLink}

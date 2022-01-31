@@ -26,23 +26,21 @@ export default function Portfolio() {
   return (
     <div className={styles.root}>
       {/* <h1>Portfolio</h1> */}
-      <Image
+      <img
         src="/images/next-page.png"
         alt=""
         onClick={() => cycleProject("prev")}
-        className={styles.prev}
-        width={48}
-        height={48}
+        className={`${styles.icon} ${styles.prev}`}
+        
       />
-      <Project project={projects[projectIndex]} cycleProject={cycleProject} />
+      <Project project={projects[projectIndex]}/>
       
-        <Image
+        <img
           src="/images/next-page.png"
           alt=""
           onClick={() => cycleProject("next")}
-          className={styles.next}
-          width={48}
-          height={48}
+          className={`${styles.icon} ${styles.next}`}
+          
         />
       
     </div>
