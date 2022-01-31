@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Image from "next/image"
-import Project from "../components/projects/project";
-import projects from "../utils/Projects";
-import styles from "../styles/Porfolio.module.css";
+
+import Project from "../../components/projects/project";
+import projects from "../../utils/Projects";
+import styles from "../../styles/Porfolio.module.css";
+import Link from "next/link";
 
 export default function Portfolio() {
   // const [project, setProject] = useState(projects[0]);

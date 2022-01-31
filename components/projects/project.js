@@ -1,8 +1,9 @@
 import styles from "./project.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Project({ project}) {
-  const { title, image, technologies, appLink, repoLink } = project;
+export default function Project({ project }) {
+  const { id, title, image, technologies, appLink, repoLink } = project;
   return (
     <div className={styles.root}>
       <div>
@@ -15,7 +16,13 @@ export default function Project({ project}) {
           {title}
         </a>
       </div>
-      <Image src={image} alt={title} width={375} height={375} priority />
+
+      <Link href={`/portfolio/${id}`}>
+        <a>
+          <Image src={image} alt={title} width={375} height={375} priority />
+        </a>
+      </Link>
+
       <div>
         <a
           href={repoLink}
