@@ -10,8 +10,8 @@ export default function Home() {
           alt="Laith Alwani"
           id="my-image"
           priority
-          width={900}
-          height={800}
+          width={890}
+          height={773}
         />
       </div>
 

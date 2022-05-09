@@ -5,18 +5,18 @@ export default function ProjectDetails({ project }) {
     project;
   return (
     <div className={styles.root}>
-      <img src={image} alt={title} />
+      <Image src={image} alt={title} width={500} height={500} />
       <div className={styles.content}>
         <h1>{title}</h1>
         <p>{description}</p>
         <ul>
-          {technologies.map((tech) => (
-            <li>
-              <Image src={tech} alt={"alt"} width={96} height={96} />
+          {technologies.map((tech, i) => (
+            <li key={i}>
+              <Image src={tech} alt="icon" width={96} height={96} />
             </li>
           ))}
         </ul>
-       
+        
           <a href={appLink} className="btn">
             App
           </a>
