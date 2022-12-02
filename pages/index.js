@@ -36,7 +36,7 @@ export default function Home() {
           fast-paced, quality-driven team to build better experiences on the
           web.
         </p>
-        <a href="./resume.pdf" target="_blank" rel="noreferrer" className="btn">
+        <a href="./resume.docx" target="_blank" rel="noreferrer" className="btn">
           Resume
         </a>
       </div>

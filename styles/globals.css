@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap");
 
 *,
 *:before,
@@ -7,9 +7,9 @@
 }
 
 body {
-  background: #f2f2f2;
+  background: #dfdfdf;
   color: #333;
-  font-family: "Nunito";
+  font-family: "Roboto";
   margin: 0;
 }
 
@@ -54,7 +54,7 @@ nav .logo a {
 
 
 .content {
-  min-height: 75vh;
+  min-height: 79vh;
   margin: 0 auto;
   flex: 1;
   display: flex;
@@ -96,6 +96,7 @@ footer span {
 .btn {
   background-color: #a7a7a7;
   border: 0 solid #e5e7eb;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   display: flex;
   font-size: 1rem;
@@ -125,27 +126,26 @@ footer span {
 .btn:after {
   content: "";
   position: absolute;
-  border: 1px solid #333;
-  bottom: 4px;
-  left: 4px;
+  border: 0.07rem solid #333;
+  border-radius: 0.25rem;
+  bottom: 0.25rem;
+  left: 0.4rem;
   width: calc(100% - 1px);
   height: calc(100% - 1px);
 }
 
-.btn:hover:after {
-  bottom: 2px;
-  left: 2px;
-}
-
+.btn:hover:after,
 .active:after {
-  bottom: 2px;
-  left: 2px;
+  bottom: 0.1rem;
+  left: 0.1rem;
   transform: none;
 }
 
+
+
 .nav-link {
-  max-width: 85px;
-  line-height: 1rem;
+  max-width: 6rem;
+  line-height: 1.5rem;
   padding: 0.5rem;
 }
 

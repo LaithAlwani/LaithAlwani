@@ -24,44 +24,33 @@ export default function Contact() {
     }, 2000);
   };
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={styles.form}
-      autoComplete="off"
-      noValidate
-    >
+    <form onSubmit={handleSubmit} className={styles.form} autoComplete="off" noValidate>
       {success && <div className={styles.success}>{success}</div>}
       <h1>Contact Us</h1>
-      <div>
-        {/* <label htmlFor="name">Name:</label> */}
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={request.name}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        {/* <label htmlFor="email">Email:</label> */}
-        <input
-          type="text"
-          name="email"
-          placeholder="Email"
-          value={request.email}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        {/* <label htmlFor="message">Message:</label> */}
-        <textarea
-          type="text"
-          name="message"
-          placeholder="Messsage"
-          value={request.message}
-          onChange={handleChange}
-        />
-      </div>
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={request.name}
+        onChange={handleChange}
+      />
+
+      <input
+        type="text"
+        name="email"
+        placeholder="Email"
+        value={request.email}
+        onChange={handleChange}
+      />
+
+      <textarea
+        type="text"
+        name="message"
+        placeholder="Messsage"
+        value={request.message}
+        onChange={handleChange}
+      />
 
       <button type="submit" className="btn">
         Submit
