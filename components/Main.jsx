@@ -6,9 +6,9 @@ export default function Main() {
     <section className="section">
       <div className="main">
         <ul className="social-links-main">
-          {socialLinks.map(link=>(<SocialLink link={link} />))}
+          {socialLinks.map((link, i)=>(<SocialLink key={i} link={link} />))}
         </ul>
-        <h1>Hello, I'm Laith Alwani</h1>
+        <h1>Hello, I&apos;m Laith Alwani</h1>
         <p>
           A Full Stack Developer with 3+ years experience with a background in Economics and Human Resources.
         </p>
