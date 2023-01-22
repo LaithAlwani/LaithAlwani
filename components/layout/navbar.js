@@ -6,11 +6,12 @@ import { useRouter } from "next/router";
 export default function Navbar() {
   const router = useRouter();
   const pathname = router.pathname;
+  console.log(pathname)
 
   return (
     <nav>
-      <Link href="/">
-        <div className="logo">
+      <div className="logo">
+        <Link href="/">
           <Image
             src="/images/my-image.png"
             alt="Laith Alwani"
@@ -19,20 +20,27 @@ export default function Navbar() {
             width={48}
             height={48}
           />
-          <Image src="/images/logo.png" width={48} height={48} alt="logo" />
+          {/* <Image src="/images/logo.png" width={48} height={48} alt="logo" /> */}
+        </Link>
+        <div style={{ marginLeft: "0.5rem" }}>
+          <h2 style={{ margin: 0 }}>Laith Alwani</h2>
+          <em style={{ fontSize: "0.8rem" }}>Full Stack Developer</em>
         </div>
-      </Link>
-      <Link href="/">
-        <a className={pathname === "/" ? "btn nav-link active" : "btn nav-link"}>About</a>
-      </Link>
-      <Link href="/portfolio">
-        <a className={pathname === "/portfolio" ? "btn nav-link active" : "btn nav-link"}>
-          Portfolio
-        </a>
-      </Link>
-      <Link href="/contact">
-        <a className={pathname === "/contact" ? "btn nav-link active" : "btn nav-link"}>Contact</a>
-      </Link>
+      </div>
+      <div className="nav-links">
+        <Link href="">Home</Link>
+        <Link href="#about" className={pathname === "/" ? " nav-link active" : " nav-link"}>
+          About
+        </Link>
+        <Link
+          href="#projects"
+          className={pathname === "/portfolio" ? " nav-link active" : " nav-link"}>
+          Projects
+        </Link>
+        <Link href="#contact" className={pathname === "/contact" ? " nav-link active" : " nav-link"}>
+          Contact
+        </Link>
+      </div>
     </nav>
   );
 }
