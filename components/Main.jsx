@@ -1,3 +1,4 @@
+import Link from "next/link";
 import socialLinks from "../utils/SocialLinksList"
 import SocialLink from "./ui/SocialLink";
 export default function Main() {
@@ -12,6 +13,7 @@ export default function Main() {
         <p>
           A Full Stack Developer with 3+ years experience with a background in Economics and Human Resources.
         </p>
+        <Link href="#projects" className="btn">Projects</Link>
       </div>
     </section>
   );

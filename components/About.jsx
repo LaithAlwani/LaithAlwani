@@ -4,6 +4,7 @@ import Header from "./Header";
 export default function About() {
   return (
     <section className="section bg-white" id="about">
+      
       <Header
         header="About Me"
         subHeader="Get to know who I am, learn about my skills what hobbies"
@@ -23,11 +24,11 @@ export default function About() {
           I Led a team of three to develop a single-page MERN app that helps team managers track
           their players, workouts, schedule and attendance to special events. I’m excited to
           leverage my skills as part of a fast-paced, quality-driven team to build better
-          experiences on the web.
-        </p>
-        <a href="./resume.docx" target="_blank" rel="noreferrer" className="btn">
-          Resume
+          experiences on the web, to learn more please check out my <a href="./resume.docx" target="_blank" rel="noreferrer" className="cv-link">
+          resume
         </a>
+        </p>
+        
       </div>
     </section>
   );

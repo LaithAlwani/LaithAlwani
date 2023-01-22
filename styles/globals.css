@@ -81,9 +81,19 @@ nav {
 .header {
   text-align: center;
   margin-block-end: 2rem;
+  padding-inline: 0.5rem;
 }
 .header h2 {
   font-size: 2.5rem;
+}
+
+.btn{
+  background-color: #6ace6a;
+  padding: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.25rem;
+  text-align: center;
 }
 
 .social-links-main{
@@ -107,6 +117,13 @@ nav {
 .main p{
   max-width: 40rem;
   margin: auto;
+}
+
+.cv-link{
+  color: #6ace6a;
+  padding: 0;
+  font-size: 1.1rem;
+  text-decoration: underline;
 }
 
 .projects{
@@ -212,13 +229,18 @@ footer span {
   .social-links-main{
     display: none;
   }
+  .btn{
+    width: 100%;
+  }
   #main {
     width: 100%;
   }
 }
 
-.btn {
-  background-color: #c4c4c4;
+
+
+/* .btn {
+  background-color: #6ace6a;
   border: 0 solid #e5e7eb;
   border-radius: 0.25rem;
   box-sizing: border-box;
@@ -228,7 +250,7 @@ footer span {
   justify-content: center;
   line-height: 1.75rem;
   padding: 0.75rem 1.65rem;
-  margin-top: 0.5rem;
+  margin: 1rem auto;
   position: relative;
   text-align: center;
   text-decoration: none #333 solid;
@@ -250,7 +272,7 @@ footer span {
 .btn:after {
   content: "";
   position: absolute;
-  border: 0.07rem solid rgb(145, 145, 145);
+  border: 0.07rem solid;
   border-radius: 0.25rem;
   bottom: 0.25rem;
   left: 0.25rem;
@@ -263,4 +285,4 @@ footer span {
   bottom: 0.1rem;
   left: 0.1rem;
   transform: none;
-}
+} */
