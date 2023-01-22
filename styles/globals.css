@@ -45,12 +45,16 @@ nav a {
 nav .logo {
   margin-right: auto;
   display: flex;
-  flex-direction: column;
+  cursor: pointer;
 }
 
 nav .logo a {
   margin: 0;
   padding: 0;
+}
+
+#avatar{
+  border-radius: 50%;
 }
 
 
@@ -127,12 +131,12 @@ footer span {
 .btn:after {
   content: "";
   position: absolute;
-  border: 0.07rem solid #333;
+  border: 0.07rem solid rgb(145, 145, 145);
   border-radius: 0.25rem;
   bottom: 0.25rem;
-  left: 0.4rem;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
+  left: 0.25rem;
+  width: calc(100% - 0.1rem);
+  height: calc(100% - 0.1rem);
 }
 
 .btn:hover:after,

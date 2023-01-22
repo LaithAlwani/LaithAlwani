@@ -5,14 +5,7 @@ export default function Home() {
   return (
     <div className={styles.about}>
       <div className={styles.imgContainer}>
-        <Image
-          src="/images/my-image.png"
-          alt="Laith Alwani"
-          id="my-image"
-          priority
-          width={890}
-          height={773}
-        />
+       
       </div>
 
       <div>

@@ -2,29 +2,33 @@ import { useState } from "react";
 import styles from "../styles/contact.module.css";
 
 export default function Contact() {
-  const [request, setRequest] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  
   const [success, setSuccess] = useState("");
 
-  const handleChange = (e) => {
-    console.log(e.target.name);
-    setRequest({ ...request, [e.target.name]: e.target.value });
+  const handleChange = (e, field) => {
+    if (field === "name")
+      setName(e.target.value);
+    else if (field === "email")
+      setEmail(e.target.value)
+    else
+      setMessage(e.target.value)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setRequest({ name: "", email: "", message: "" });
-    setSuccess("Request Sent! Thank you");
-    setTimeout(() => {
-      setSuccess("");
-    }, 2000);
+      setName("");
+      setEmail("");
+      setMessage("");
+      setSuccess("Request Sent! Thank you");
+      setTimeout(() => {
+        setSuccess("");
+      }, 2000);
   };
   return (
-    <form onSubmit={handleSubmit} className={styles.form} autoComplete="off" noValidate>
+    <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
       {success && <div className={styles.success}>{success}</div>}
       <h1>Contact Us</h1>
 
@@ -32,24 +36,27 @@ export default function Contact() {
         type="text"
         name="name"
         placeholder="Name"
-        value={request.name}
-        onChange={handleChange}
+        value={name}
+        onChange={(e) => handleChange(e, "name")}
+        required
       />
 
       <input
         type="text"
         name="email"
         placeholder="Email"
-        value={request.email}
-        onChange={handleChange}
+        value={email}
+        onChange={(e) => handleChange(e, "email")}
+        required
       />
 
       <textarea
         type="text"
         name="message"
         placeholder="Messsage"
-        value={request.message}
-        onChange={handleChange}
+        value={message}
+        onChange={(e) => handleChange(e, "message")}
+        required
       />
 
       <button type="submit" className="btn">

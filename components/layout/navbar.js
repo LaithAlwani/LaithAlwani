@@ -9,11 +9,19 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="logo">
-        <Link href="/">
-          <Image src="/images/logo.png" width={72} height={72} alt="logo" />
-        </Link>
-      </div>
+      <Link href="/">
+        <div className="logo">
+          <Image
+            src="/images/my-image.png"
+            alt="Laith Alwani"
+            id="avatar"
+            priority
+            width={48}
+            height={48}
+          />
+          <Image src="/images/logo.png" width={48} height={48} alt="logo" />
+        </div>
+      </Link>
       <Link href="/">
         <a className={pathname === "/" ? "btn nav-link active" : "btn nav-link"}>About</a>
       </Link>
