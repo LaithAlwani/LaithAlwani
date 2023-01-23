@@ -5,7 +5,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
   const handleChange = (e, field) => {
@@ -16,6 +16,33 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!name) {
+      setError("please enter your name");
+      return setTimeout(() => {
+        setError("");
+      }, 2000);
+    }
+    if (!email) {
+      setError("please enter your email");
+      return setTimeout(() => {
+        setError("");
+      }, 2000);
+    }
+    if (!message) {
+      setError("please enter a message");
+      return setTimeout(() => {
+        setError("");
+      }, 2000);
+    }
+
+    if (message.length > 250) {
+      setError("message is longer than 250 characters");
+      return setTimeout(() => {
+        setError("");
+      }, 2000);
+    }
+
     setName("");
     setEmail("");
     setMessage("");
@@ -25,42 +52,44 @@ export default function Contact() {
     }, 2000);
   };
   return (
-    <section className="section">
+    <section className="section bg-white" id="contact">
       <Header
         header="contact"
         subHeader="Feel free to contact me by filling out the form below and I will get back to you as soon as I can"
       />
       <div className="container">
-        <form onSubmit={handleSubmit} autoComplete="off" id="contact">
-          {success && <div className="success">{success}</div>}
+        <form onSubmit={handleSubmit} autoComplete={false}>
+          {error && <div className="message error">{error}</div>}
+          {success && <div className="message success">{success}</div>}
           <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="John"
             value={name}
             onChange={(e) => handleChange(e, "name")}
-            required
           />
 
           <label htmlFor="email">Email</label>
           <input
             type="text"
             name="email"
-            placeholder="Email"
+            placeholder="johnsmith@example.com"
             value={email}
             onChange={(e) => handleChange(e, "email")}
-            required
           />
           <label htmlFor="message">Message</label>
           <textarea
             type="text"
             name="message"
-            placeholder="Messsage"
+            placeholder="Message should 250 characters or less..."
             value={message}
             onChange={(e) => handleChange(e, "message")}
-            required
           />
+          <span className={message.length >= 251 ? "message-length error" : "message-length"}>
+            {250 - message.length} {" "}
+            {message.length < 249 || message.length > 251 ? "charcters" : "charcter"} remaning
+          </span>
 
           <button type="submit" className="btn">
             Submit
