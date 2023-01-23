@@ -19,6 +19,11 @@ a {
   font-weight: 700;
 }
 
+nav a:hover,
+nav a:focus{
+  color: #6ace6a;
+}
+
 h1,
 h2,
 h3 {
@@ -40,7 +45,7 @@ nav {
   align-items: center;
   padding: 1rem;
   background-color: white;
-  z-index: 2;
+  z-index: 3;
 }
 
 .logo {
@@ -56,6 +61,27 @@ nav {
 
 #avatar {
   border-radius: 50%;
+}
+
+.mobile-nav-button{
+  display: none;
+}
+
+.nav-mobile{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 6rem;
+  background-color: white;
+  z-index: 2;
+}
+.nav-mobile a{
+  border-block-end: 0.1rem solid ;
+}
+
+.nav-mobile a:last-child{
+  border: none;
 }
 
 .section {
@@ -258,6 +284,7 @@ footer span {
   .social-links-main{
     display: none;
   }
+  .mobile-nav-button{display: block;}
   .btn{
     width: 100%;
   }
