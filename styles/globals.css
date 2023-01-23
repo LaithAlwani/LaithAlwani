@@ -197,6 +197,21 @@ nav {
   text-decoration: underline;
 }
 
+.skill-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap:0.5rem
+}
+.skill-list li{
+  background-color: var(--la-green);
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  border: 0.1rem solid;
+  
+}
+
 /*projects section*/
 .projects {
   display: flex;

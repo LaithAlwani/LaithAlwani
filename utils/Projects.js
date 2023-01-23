@@ -50,9 +50,9 @@ export const languages = [
 ]
 
 export const frameworks = [
-  "React.js", "Next.js", "Tailwind", "Bootstrap", "Material-UI", "Express.js", "Handlebars"
+  "React.js", "Next.js", "Material-UI",  "Bootstrap", "Tailwind", "Express.js", "Handlebars"
 ]
 
-export const databases = ["MySQL", "MongoDB", "Firestore"]
+export const databases = ["MongoDB", "Firestore", "MySQL"]
 
-export const devOps = "firebase"
+export const devOps = "Firebase"
