@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
 :root{
-  --la-green:#6ace6a;
-  --la-light-gray:#ebebeb;
+  --la-green:#90f190;
   --la-dark-gray:#666;
   --la-black:#333;
   --la-off-white:#f2f2f2;
@@ -42,7 +41,6 @@ h3 {
   margin-block-end: 1rem;
 }
 
-
 #main {
   width: 100%;
   margin: 0 auto;
@@ -73,11 +71,11 @@ h3 {
 }
 
 .bg-linear-green {
-  background: linear-gradient(180deg, var(--la-green) 50%, var(--la-light-gray));
+  background: linear-gradient(180deg, var(--la-green) 50%, var(--la-off-white));
 }
 
 .bg-linear-gray {
-  background: linear-gradient(180deg, var(--la-light-gray) 70%, var(--la-green));
+  background: linear-gradient(180deg, var(--la-off-white) 80%, var(--la-green));
 }
 
 .bg-green {

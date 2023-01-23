@@ -1,5 +1,5 @@
 import Image from "next/image";
-import projects from "../utils/Projects";
+import {projects} from "../utils/Projects";
 import Header from "./Header";
 
 export default function Projects() {

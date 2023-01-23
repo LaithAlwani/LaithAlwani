@@ -11,7 +11,7 @@ const mui = "/icons/mui.png";
 // const css = "/icons/css.png";
 
 
-const Projects = [
+export const projects = [
   {
     id:1,
     title: "Score Renovations",
@@ -45,4 +45,14 @@ const Projects = [
   }
 ];
 
-export default Projects;
+export const languages = [
+  "HTML", "CSS", "JavaScript", "Node.js"
+]
+
+export const frameworks = [
+  "React.js", "Next.js", "Tailwind", "Bootstrap", "Material-UI", "Express.js", "Handlebars"
+]
+
+export const databases = ["MySQL", "MongoDB", "Firestore"]
+
+export const devOps = "firebase"
