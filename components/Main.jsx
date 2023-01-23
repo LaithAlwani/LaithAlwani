@@ -13,7 +13,7 @@ export default function Main() {
         <p>
           A Full Stack Developer with 3+ years experience with a background in Economics and Human Resources.
         </p>
-        <a href="#projects" className="btn btn-light">Projects</a>
+        <a href="#projects" className="btn p-3">Projects</a>
       </div>
     </section>
   );
