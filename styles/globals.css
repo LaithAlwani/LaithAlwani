@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+:root{
+  --la-green:#6ace6a;
+  --la-light-gray:#ebebeb;
+  --la-dark-gray:#666;
+  --la-black:#333;
+  --la-off-white:#f2f2f2;
+  --border-radius:0.25rem;
+}
 *,
 *:before,
 *:after {
@@ -7,9 +15,10 @@
 html {
   scroll-behavior: smooth;
 }
+/*general site styles*/
 body {
-  background: #f2f2f2;
-  color: #333;
+  background: var(--la-off-white);
+  color: var(--la-black);
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
 }
@@ -17,13 +26,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.5rem;
   font-weight: 700;
 }
 
 nav a:hover,
 nav a:focus {
-  color: #6ace6a;
+  color: var(--la-green);
 }
 
 h1,
@@ -33,11 +42,50 @@ h3 {
   margin-block-end: 1rem;
 }
 
+
 #main {
   width: 100%;
   margin: 0 auto;
 }
 
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding-block: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 60rem;
+  padding-inline: 0.5rem;
+}
+
+.btn {
+  background-color: var(--la-green);
+  padding: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.bg-linear-green {
+  background: linear-gradient(180deg, var(--la-green) 50%, var(--la-light-gray));
+}
+
+.bg-linear-gray {
+  background: linear-gradient(180deg, var(--la-light-gray) 70%, var(--la-green));
+}
+
+.bg-green {
+  background-color: var(--la-green);
+}
+
+
+/*Navbar*/
 nav {
   position: fixed;
   width: 100%;
@@ -63,19 +111,28 @@ nav {
 
 #avatar {
   border-radius: 50%;
+  margin-inline-end: 0.5rem;
 }
 
+.my-title-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.my-title-container em{
+  font-size: 0.8rem;
+}
+
+/*mobile Navbar*/
 .mobile-nav-button {
   position: relative;
   display: none;
   background-color: transparent;
   border: none ;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 
 .nav-mobile {
   position: fixed;
@@ -87,28 +144,14 @@ nav {
   z-index: 2;
 }
 .nav-mobile a {
-  border-block-end: 0.1rem solid;
+  border-block-end: 0.1rem solid #bebebe;
 }
 
 .nav-mobile a:last-child {
   border: none;
 }
 
-.section {
-  width: 100%;
-  min-height: 100vh;
-  padding-block: 6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  max-width: 60rem;
-  padding-inline: 0.5rem;
-}
-
+/*header component*/
 .header {
   text-align: center;
   margin-block-end: 2rem;
@@ -119,39 +162,8 @@ nav {
   font-size: 2.5rem;
 }
 
-.btn {
-  background-color: #6ace6a;
-  padding: 1rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 0.25rem;
-  text-align: center;
-}
 
-.btn-light {
-  background-color: #c6d8b5;
-  padding-inline: 3rem;
-}
-
-.social-links-main {
-  position: absolute;
-  left: 0;
-  list-style: none;
-  padding: 0;
-  background-color: transparent;
-}
-
-.bg-linear-green {
-  background: linear-gradient(180deg, #6ace6a 50%, #ebebeb);
-}
-
-.bg-linear-gray {
-  background: linear-gradient(180deg, #ebebeb 70%, #6ace6a);
-}
-
-.bg-green {
-  background-color: #6ace6a;
-}
+/*home section*/
 
 .main {
   font-size: 1.5em;
@@ -165,13 +177,29 @@ nav {
   margin: 0 auto 2rem;
 }
 
+.btn-light {
+  background-color: #c4f9bf;
+  padding-inline: 3rem;
+}
+
+.social-links-main {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+/*about section*/
+
 .cv-link {
-  color: #6ace6a;
+  color: var(--la-green);
   padding: 0;
   font-size: 1.1rem;
   text-decoration: underline;
 }
 
+/*projects section*/
 .projects {
   display: flex;
   justify-content: center;
@@ -187,7 +215,7 @@ nav {
 .project-image {
   width: 10rem;
   height: 10rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }
 
 /*form*/
@@ -196,7 +224,7 @@ form {
   height: auto;
   padding: 1rem;
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
 }
 
 form input {
@@ -209,7 +237,7 @@ form textarea {
   font-family: "Nunito";
   font-size: 1rem;
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   margin-block-start: 0.5rem;
   margin-block-end: 2rem;
   padding: 0.5rem;
@@ -228,7 +256,7 @@ form textarea:focus {
 }
 
 label {
-  color: #666;
+  color: var(--la-dark-gray);
   width: 100%;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -243,7 +271,7 @@ label {
   opacity: 0.7;
   font-size: 0.8rem;
   width: 10rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }
 
 .message {
@@ -251,7 +279,7 @@ label {
   padding: 1rem;
   font-weight: bold;
   opacity: 0.7;
-  border-radius: 0.2rem;
+  border-radius: var(--border-radius);
 }
 .error {
   color: red;
@@ -265,6 +293,7 @@ label {
   border: 1px solid green;
 }
 
+/*footer*/
 footer {
   text-align: center;
   /* border-top: 1px solid; */
@@ -287,66 +316,19 @@ footer span {
   padding-block: 0.5rem;
 }
 
+/*media queries*/
 @media (max-width: 768px) {
+  #main {
+    width: 100%;
+  }
   .nav-links,
   .social-links-main {
     display: none;
   }
   .mobile-nav-button {
-    display: block;
+    display: flex;
   }
   .btn {
     width: 100%;
   }
-  #main {
-    width: 100%;
-  }
 }
-
-/* .btn {
-  background-color: #6ace6a;
-  border: 0 solid #e5e7eb;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.75rem;
-  padding: 0.75rem 1.65rem;
-  margin: 1rem auto;
-  position: relative;
-  text-align: center;
-  text-decoration: none #333 solid;
-  text-decoration-thickness: auto;
-  width: 100%;
-  max-width: 275px;
-  position: relative;
-  cursor: pointer;
-  transform: rotate(-2deg);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.btn:focus {
-  outline: 0;
-}
-
-.btn:after {
-  content: "";
-  position: absolute;
-  border: 0.07rem solid;
-  border-radius: 0.25rem;
-  bottom: 0.25rem;
-  left: 0.25rem;
-  width: calc(100% - 0.1rem);
-  height: calc(100% - 0.1rem);
-}
-
-.btn:hover:after,
-.active:after {
-  bottom: 0.1rem;
-  left: 0.1rem;
-  transform: none;
-} */

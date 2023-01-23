@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import socialLinks from "../utils/SocialLinksList"
 import SocialLink from "./ui/SocialLink";
 export default function Main() {
