@@ -4,7 +4,7 @@ import Header from "./Header";
 
 export default function Projects() {
   return (
-    <section className="section bg-linear-green" id="projects">
+    <section className="section" id="projects">
       <Header
         header="Projects"
         subHeader="A collection of higlighted projects that I have worked on during my career"

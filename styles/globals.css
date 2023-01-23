@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
 :root{
-  --la-green:#90f190;
+  --la-light-green:#BFF1BA;
+  --la-green:#73d473;
   --la-dark-gray:#666;
   --la-black:#333;
   --la-off-white:#f2f2f2;
@@ -31,7 +32,7 @@ a {
 
 nav a:hover,
 nav a:focus {
-  color: var(--la-green);
+  color: var(--la-light-green);
 }
 
 h1,
@@ -62,7 +63,7 @@ h3 {
 }
 
 .btn {
-  background-color: var(--la-green);
+  background-color: var(--la-light-green);
   padding: 1rem;
   font-weight: 700;
   border: none;
@@ -70,12 +71,9 @@ h3 {
   text-align: center;
 }
 
-.bg-linear-green {
-  background: linear-gradient(180deg, var(--la-green) 50%, var(--la-off-white));
-}
-
-.bg-linear-gray {
-  background: linear-gradient(180deg, var(--la-off-white) 80%, var(--la-green));
+.bg-green {
+  /* background: linear-gradient(180deg, var(--la-green) 50%, var(--la-off-white)); */
+  background: url("/images/bg.svg");
 }
 
 .bg-green {
@@ -160,9 +158,7 @@ nav {
   font-size: 2.5rem;
 }
 
-
 /*home section*/
-
 .main {
   font-size: 1.5em;
   text-align: center;
@@ -176,7 +172,7 @@ nav {
 }
 
 .btn-light {
-  background-color: #c4f9bf;
+  background-color: var(--la-green);
   padding-inline: 3rem;
 }
 
@@ -199,12 +195,13 @@ nav {
 
 .skill-list{
   list-style: none;
+  padding-inline-start: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap:0.5rem
 }
 .skill-list li{
-  background-color: var(--la-green);
+  background-color: var(--la-light-green);
   font-weight: 700;
   padding: 0.5rem;
   border-radius: var(--border-radius);

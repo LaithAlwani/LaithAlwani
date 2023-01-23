@@ -3,7 +3,7 @@ import SocialLink from "./ui/SocialLink";
 export default function Main() {
 
   return (
-    <section className="section bg-linear-green" id="home">
+    <section className="section bg-green" id="home">
       {/* <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" priority /> */}
       <div className="main">
         <ul className="social-links-main">

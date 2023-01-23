@@ -4,7 +4,7 @@ import { frameworks, languages, databases, devOps } from "../utils/Projects";
 
 export default function About() {
   return (
-    <section className="section bg-linear-gray" id="about">
+    <section className="section" id="about">
       <Header
         header="About Me"
         subHeader="Get to know who I am, learn about my skills what hobbies"
