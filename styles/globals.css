@@ -70,19 +70,12 @@ nav {
   display: none;
   background-color: transparent;
   border: none ;
-  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.mobile-nav-button::before,
-.mobile-nav-button::after {
-  content: "";
-  position: absolute;
-  line-height: 0.1rem;
-  color: #333;
-}
+
 
 .nav-mobile {
   position: fixed;
