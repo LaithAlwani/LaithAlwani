@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="nav-links">
           <NavLinks />
         </div>
-        <button onClick={() => setToggleMenu(!toggleMenu)} className="mobile-nav-button">
+        <button aria-label="nav-button" onClick={() => setToggleMenu(!toggleMenu)} className="mobile-nav-button">
           {!toggleMenu ? <MdMenu size={28} /> : <MdClose size={28} />}
         </button>
       </nav>
