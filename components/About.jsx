@@ -3,7 +3,7 @@ import Header from "./Header";
 
 export default function About() {
   return (
-    <section className="section bg-white" id="about">
+    <section className="section bg-linear-gray" id="about">
       
       <Header
         header="About Me"

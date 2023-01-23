@@ -2,10 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function SocialLink({ link }) {
-  const { path, label, icon, alt } = link;
+  const { path, label, icon } = link;
   return (
     <Link href={path} target="_blank" rel="noreferrer" aria-label={label}>
-      <Image src={icon} alt={alt} width={32} height={32} />
+      {icon}
     </Link>
   );
 }

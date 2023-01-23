@@ -1,26 +1,28 @@
+import {FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin} from "react-icons/fa"
+const size=28
 const SocialLinksList = [
   {
     path: "https://github.com/LaithAlwani",
     label: "Github Account",
-    icon: "/images/github.png",
+    icon: <FaGithubSquare size={size} />,
     alt: "github link",
   },
   {
     path: "https://www.linkedin.com/in/laith-alwani/",
     label: "Linkedin Account",
-    icon: "/images/linkedin.png",
+    icon: <FaLinkedin size={size} />,
     alt: "linkedin link",
   },
   {
     path: "https://www.facebook.com/AlwaniLaith",
     label: "Facebook Account",
-    icon: "/images/facebook.png",
+    icon: <FaFacebookSquare size={size} />,
     alt: "facebook link",
   },
   {
     path: "https://www.instagram.com/laitho15/",
     label: "Instagram Account",
-    icon: "/images/instagram.png",
+    icon: <FaInstagramSquare size={size} />,
     alt: "instagram link",
   },
 ];

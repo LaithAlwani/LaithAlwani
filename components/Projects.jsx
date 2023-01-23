@@ -4,12 +4,12 @@ import Header from "./Header";
 
 export default function Projects() {
   return (
-    <section className="section pos-relative" id="projects">
+    <section className="section bg-linear-green" id="projects">
       <Header
         header="Projects"
         subHeader="A collection of higlighted projects that I have worked on during my career"
       />
-      <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" />
+      {/* <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" /> */}
 
       <div className="container projects">
         {projects.map((project) => (

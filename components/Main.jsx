@@ -5,8 +5,8 @@ import SocialLink from "./ui/SocialLink";
 export default function Main() {
 
   return (
-    <section className="section pos-relative" id="home">
-      <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" priority />
+    <section className="section bg-linear-green" id="home">
+      {/* <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" priority /> */}
       <div className="main">
         <ul className="social-links-main">
           {socialLinks.map((link, i)=>(<li key={i}><SocialLink link={link}/></li>))}

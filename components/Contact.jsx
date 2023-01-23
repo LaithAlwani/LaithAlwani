@@ -52,7 +52,7 @@ export default function Contact() {
     }, 2000);
   };
   return (
-    <section className="section bg-white" id="contact">
+    <section className="section bg-linear-gray" id="contact">
       <Header
         header="contact"
         subHeader="Feel free to contact me by filling out the form below and I will get back to you as soon as I can"

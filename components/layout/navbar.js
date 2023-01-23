@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import {MdMenu, MdClose} from "react-icons/md"
 
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -30,7 +31,7 @@ export default function Navbar() {
           <a href="#contact">Contact</a>
         </div>
         <button onClick={() => setToggleMenu(!toggleMenu)} className="mobile-nav-button">
-          X
+          {!toggleMenu ? <MdMenu size={28} /> : <MdClose size={28} />}
         </button>
       </nav>
       {toggleMenu && (
