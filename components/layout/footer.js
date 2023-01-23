@@ -11,8 +11,8 @@ export default function Footer() {
           <li key={i}><SocialLink link={link}/></li>
         ))}
       </ul>
-      <span>© 2020 laithalwani@gmail.com</span>
-      <span>Ottawa, ON.</span>
+      <span>© 2020 laithalwani@gmail.com,  Ottawa, ON.</span>
+      <span></span>
     </footer>
   ); 
 }

@@ -58,7 +58,7 @@ export default function Contact() {
         subHeader="Feel free to contact me by filling out the form below and I will get back to you as soon as I can"
       />
       <div className="container">
-        <form onSubmit={handleSubmit} autoComplete={false}>
+        <form onSubmit={handleSubmit} autoComplete="false">
           {error && <div className="message error">{error}</div>}
           {success && <div className="message success">{success}</div>}
           <label htmlFor="name">Name</label>

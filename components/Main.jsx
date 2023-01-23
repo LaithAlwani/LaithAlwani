@@ -5,7 +5,7 @@ import SocialLink from "./ui/SocialLink";
 export default function Main() {
 
   return (
-    <section className="section section-main" id="home">
+    <section className="section pos-relative" id="home">
       <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" />
       <div className="main">
         <ul className="social-links-main">
