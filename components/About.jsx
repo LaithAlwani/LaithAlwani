@@ -35,24 +35,24 @@ export default function About() {
           <h3>languages</h3>
           <div>
             <ul className="skill-list">
-              {languages.map((lang) => (
-                <li>{lang}</li>
+              {languages.map((lang,i) => (
+                <li key={i}>{lang}</li>
               ))}
             </ul>
           </div>
           <h3>Framworks</h3>
           <div>
             <ul className="skill-list">
-              {frameworks.map((lang) => (
-                <li>{lang}</li>
+              {frameworks.map((frame,i) => (
+                <li key={i}>{frame}</li>
               ))}
             </ul>
           </div>
           <h3>Database</h3>
           <div>
             <ul className="skill-list">
-              {databases.map((lang) => (
-                <li>{lang}</li>
+              {databases.map((data,i) => (
+                <li key={i}>{data}</li>
               ))}
             </ul>
           </div>
