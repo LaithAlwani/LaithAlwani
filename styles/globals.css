@@ -132,6 +132,11 @@ nav a:focus {
   display: flex;
 }
 
+.nav-links{
+  display: flex;
+  align-items: center;
+}
+
 .my-title-container {
   display: flex;
   flex-direction: column;
@@ -258,12 +263,12 @@ form {
   padding: 1rem;
 }
 
-form input {
+input[type="text"] {
   line-height: 30px;
 }
 
-form input,
-form textarea {
+input[type="text"],
+textarea {
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
   color: var(--font-color);
@@ -275,18 +280,19 @@ form textarea {
   padding: 0.5rem;
   background-color: var(--background-accent);
 }
-form textarea {
+textarea {
   height: 100px;
   resize: none;
   margin-bottom: 0;
 }
 
-form input:focus,
-form textarea:focus {
+input[type="text"]:focus,
+textarea:focus {
   outline: none;
   border: 0.1rem solid;
   box-shadow: 0.1rem 0.1rem 0.25rem var(--background-accent);
 }
+
 
 label {
   color: var(--font-color);
@@ -366,4 +372,61 @@ footer span {
   .btn {
     width: 100%;
   }
+}
+
+
+/* Custom Dark Mode Toggle Element */
+
+.toggle-theme input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-flex;
+  margin: 0.5rem;
+  height: 1.5rem;
+  width: 3rem;
+}
+
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slider:before {
+  content: "";
+  background-color: #fff;
+  bottom: 0.25rem;
+  height:1rem;
+  left: 0.25rem;
+  position: absolute;
+  transition: 0.4s;
+  width: 1rem;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5rem);
+}
+
+input:checked + .slider {
+  background-color: var(--background-accent);
+}
+
+.slider.round {
+  border-radius: 1rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

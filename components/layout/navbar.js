@@ -1,10 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { MdMenu, MdClose } from "react-icons/md";
+import { MdMenu, MdClose, MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) {
+        setToggleMenu(false)
+      }
+    });
+    return () => window.removeEventListener('resize',()=>null)
+  }, []);
+
   return (
     <>
       <nav>
@@ -35,7 +45,7 @@ export default function Navbar() {
         </button>
       </nav>
       {toggleMenu && (
-        <div className="nav-mobile" onClick={() => setToggleMenu(!toggleMenu)}>
+        <div className="nav-mobile">
           <NavLinks />
         </div>
       )}
@@ -44,6 +54,18 @@ export default function Navbar() {
 }
 
 const NavLinks = () => {
+  return (
+    <>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <ThemeComponent />
+    </>
+  );
+};
+
+const ThemeComponent = () => {
   const [isDark, setIsDark] = useState(false);
 
   const setDark = () => {
@@ -67,15 +89,15 @@ const NavLinks = () => {
     setIsDark(localStorage.getItem("theme") === "dark" ? true : false);
     document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
   }, [toggleTheme]);
+
   return (
     <>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <label>
-        {isDark ? "Light" : "Dark"} mode
+      <label className="toggle-theme">
         <input type="checkbox" checked={isDark} onChange={toggleTheme} />
+        <div className="slider round">
+          <MdLightMode />
+          <MdDarkMode />
+        </div>
       </label>
     </>
   );
