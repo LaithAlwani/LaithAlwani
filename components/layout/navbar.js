@@ -9,10 +9,10 @@ export default function Navbar() {
   useEffect(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
-        setToggleMenu(false)
+        setToggleMenu(false);
       }
     });
-    return () => window.removeEventListener('resize',()=>null)
+    return () => window.removeEventListener("resize", () => null);
   }, []);
 
   return (
@@ -37,6 +37,7 @@ export default function Navbar() {
         <div className="nav-links">
           <NavLinks />
         </div>
+        <ThemeComponent />
         <button
           aria-label="nav-button"
           onClick={() => setToggleMenu(!toggleMenu)}
@@ -45,7 +46,12 @@ export default function Navbar() {
         </button>
       </nav>
       {toggleMenu && (
-        <div className="nav-mobile">
+        <div
+          className="nav-mobile"
+          onClick={(e) => {
+            e.stopPropagation();
+            setToggleMenu(!toggleMenu);
+          }}>
           <NavLinks />
         </div>
       )}
@@ -60,7 +66,6 @@ const NavLinks = () => {
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <ThemeComponent />
     </>
   );
 };
@@ -91,14 +96,12 @@ const ThemeComponent = () => {
   }, [toggleTheme]);
 
   return (
-    <>
-      <label className="toggle-theme">
-        <input type="checkbox" checked={isDark} onChange={toggleTheme} />
-        <div className="slider round">
-          <MdLightMode />
-          <MdDarkMode />
-        </div>
-      </label>
-    </>
+    <label className="toggle-theme">
+      <input type="checkbox" checked={isDark} onChange={toggleTheme} />
+      <span className={"slider round"}>
+        <MdLightMode />
+        <MdDarkMode />
+      </span>
+    </label>
   );
 };
