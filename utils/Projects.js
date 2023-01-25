@@ -55,4 +55,4 @@ export const frameworks = [
 
 export const databases = ["MongoDB", "Firestore", "MySQL"]
 
-export const devOps = "Firebase"
+export const devOps = ["Firebase", "Google Cloud"]

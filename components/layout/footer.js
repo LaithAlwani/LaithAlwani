@@ -4,8 +4,8 @@ import SocialLink from "../ui/SocialLink";
 
 export default function Footer() {
   return (
-    <footer className="bg">
-      <Image src="/images/logo.png" width={48} height={48} alt="logo" />
+    <footer>
+      <Image src="/images/logo_300dpi.png" width={48} height={48} alt="logo" />
       <ul>
        {socialLinksList.map((link, i)=>(
           <li key={i}><SocialLink link={link}/></li>

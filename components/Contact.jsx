@@ -53,11 +53,11 @@ export default function Contact() {
   };
   return (
     <section className="section" id="contact">
+      <div className="container">
       <Header
         header="contact"
         subHeader="Feel free to contact me by filling out the form below and I will get back to you as soon as I can"
       />
-      <div className="container">
         <form onSubmit={handleSubmit} autoComplete="false">
           {error && <div className="message error">{error}</div>}
           {success && <div className="message success">{success}</div>}

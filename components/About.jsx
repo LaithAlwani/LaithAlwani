@@ -5,11 +5,11 @@ import { frameworks, languages, databases, devOps } from "../utils/Projects";
 export default function About() {
   return (
     <section className="section" id="about">
+      <div className="container">
       <Header
         header="About Me"
-        subHeader="Get to know who I am, learn about my skills what hobbies"
+        subHeader="Get to know who I am, learn about my skills and hobbies"
       />
-      <div className="container">
         <div>
           <p>
             Full stack web developer with Economics and HR backgrounds, Recently earned a
@@ -59,7 +59,9 @@ export default function About() {
           <h3>DevOps</h3>
           <div>
             <ul className="skill-list">
-              <li>{devOps}</li>
+              {devOps.map((data,i) => (
+                <li key={i}>{data}</li>
+              ))}
             </ul>
           </div>
         </div>
