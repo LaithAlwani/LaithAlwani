@@ -12,6 +12,7 @@ export default function Navbar() {
         setToggleMenu(false);
       }
     });
+    //remove listner
     return () => window.removeEventListener("resize", () => null);
   }, []);
 

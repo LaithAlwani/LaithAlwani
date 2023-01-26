@@ -9,12 +9,14 @@
   --background-color: var(--la-off-white);
   --background-accent: #b5b5b5;
   --font-color: var(--la-black);
+  /* background by SVGBackgrounds.com */
   --svg-background:url("/images/bg-white.svg");
 }
 
 [data-theme="dark"] {
   --background-color: var(--la-black);
   --font-color: var(--la-off-white);
+  /* background by SVGBackgrounds.com */
   --svg-background:url("/images/bg-dark.svg");
   --background-accent: #1e1e1e;
 
