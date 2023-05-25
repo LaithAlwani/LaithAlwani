@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { MdMenu, MdClose, MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
@@ -73,6 +73,7 @@ const NavLinks = () => {
 
 const ThemeComponent = () => {
   const [isDark, setIsDark] = useState(false);
+  const toggleRef = useRef();
 
   const setDark = () => {
     localStorage.setItem("theme", "dark");
@@ -86,10 +87,10 @@ const ThemeComponent = () => {
     setIsDark(false);
   };
 
-  const toggleTheme = (e) => {
-    if (e.target.checked) setDark();
+  const toggleTheme = useCallback((e) => {
+    if (toggleRef.current.checked) setDark();
     else setLight();
-  };
+  },[toggleRef]);
 
   useEffect(() => {
     setIsDark(localStorage.getItem("theme") === "dark" ? true : false);
@@ -98,8 +99,8 @@ const ThemeComponent = () => {
 
   return (
     <label className="toggle-theme">
-      <input type="checkbox" checked={isDark} onChange={toggleTheme} />
-      <span className={"slider round"}>
+      <input type="checkbox" ref={toggleRef} checked={isDark} onChange={toggleTheme} />
+      <span className="slider round">
         <MdLightMode />
         <MdDarkMode />
       </span>

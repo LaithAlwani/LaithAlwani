@@ -14,7 +14,7 @@ export default function Projects() {
         />
         <div className="projects">
           {projects.map((project) => (
-            <div key={project.id} className="project-container">
+            <a href={project.appLink} target="_blank" rel="noreferrer" key={project.id} className="project-container">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -23,7 +23,7 @@ export default function Projects() {
                 height={256}
               />
               <h3>{project.title}</h3>
-            </div>
+            </a>
           ))}
         </div>
       </div>

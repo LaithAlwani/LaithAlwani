@@ -1,6 +1,8 @@
 import Head from "next/head"
 import Navbar from "./navbar";
-import Footer from "./footer";
+import Image from "next/image";
+import socialLinksList from "../../utils/SocialLinksList";
+import SocialLink from "../ui/SocialLink";
 
 export default function Layout({ children }) {
   return (
@@ -20,4 +22,18 @@ export default function Layout({ children }) {
       <Footer />
     </div>
   );
+}
+
+const Footer = () => {
+  return (
+    <footer>
+      <Image src="/images/logo_300dpi.png" width={48} height={48} alt="logo" />
+      <ul>
+       {socialLinksList.map((link, i)=>(
+          <li key={i}><SocialLink link={link}/></li>
+        ))}
+      </ul>
+      <span>© 2020 laithalwani@gmail.com, Ottawa, ON.</span>
+    </footer>
+  ); 
 }

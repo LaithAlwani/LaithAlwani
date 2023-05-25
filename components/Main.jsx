@@ -1,5 +1,6 @@
 import socialLinks from "../utils/SocialLinksList"
 import SocialLink from "./ui/SocialLink";
+
 export default function Main() {
 
   return (
