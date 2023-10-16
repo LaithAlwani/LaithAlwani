@@ -1,15 +1,14 @@
-import React from "react";
-import Header from "./Header";
-import { frameworks, languages, databases, devOps } from "../utils/Projects";
+import Header from "../../components/Header";
+import { frameworks, languages, databases, devOps } from "../../utils/Projects";
 
-export default function About() {
+export default function page() {
   return (
     <section className="section" id="about">
       <div className="container">
-      <Header
-        header="About Me"
-        subHeader="Get to know who I am, learn about my skills and hobbies"
-      />
+        <Header
+          header="About Me"
+          subHeader="Get to know who I am, learn about my skills and hobbies"
+        />
         <div>
           <p>
             Full stack web developer with Economics and HR backgrounds, Recently earned a
@@ -35,7 +34,7 @@ export default function About() {
           <h3>languages</h3>
           <div>
             <ul className="skill-list">
-              {languages.map((lang,i) => (
+              {languages.map((lang, i) => (
                 <li key={i}>{lang}</li>
               ))}
             </ul>
@@ -43,7 +42,7 @@ export default function About() {
           <h3>Framworks</h3>
           <div>
             <ul className="skill-list">
-              {frameworks.map((frame,i) => (
+              {frameworks.map((frame, i) => (
                 <li key={i}>{frame}</li>
               ))}
             </ul>
@@ -51,7 +50,7 @@ export default function About() {
           <h3>Database</h3>
           <div>
             <ul className="skill-list">
-              {databases.map((data,i) => (
+              {databases.map((data, i) => (
                 <li key={i}>{data}</li>
               ))}
             </ul>
@@ -59,7 +58,7 @@ export default function About() {
           <h3>DevOps</h3>
           <div>
             <ul className="skill-list">
-              {devOps.map((data,i) => (
+              {devOps.map((data, i) => (
                 <li key={i}>{data}</li>
               ))}
             </ul>

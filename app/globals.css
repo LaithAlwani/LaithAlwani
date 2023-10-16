@@ -9,7 +9,6 @@
   --background-color: var(--la-off-white);
   --background-accent: #b5b5b5;
   --font-color: var(--la-black);
-  /* background by SVGBackgrounds.com */
   --svg-background:url("/images/bg-white.svg");
 }
 
@@ -67,7 +66,7 @@ label{
 
 .section {
   max-width: 60rem;
-  min-height: 100vh;
+  min-height: 88vh;
   padding-block: 4rem;
   padding-inline: 1rem;
   margin-inline: auto;
@@ -106,7 +105,7 @@ label{
 nav {
   background-color: var(--background-color);
   position: fixed;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 100%;
   left: 0;
   display: flex;
@@ -118,6 +117,8 @@ nav {
 nav a:hover,
 nav a:focus {
   color: var(--la-light-green);
+  background-color: var(--la-black);
+  border-radius: 0.5rem;
 }
 
 .logo {
@@ -284,7 +285,7 @@ textarea {
   margin-block-start: 0.5rem;
   margin-block-end: 2rem;
   padding: 0.5rem;
-  background-color: var(--background-accent);
+  background-color: #fff;
 }
 textarea {
   height: 100px;
@@ -295,7 +296,6 @@ textarea {
 input[type="text"]:focus,
 textarea:focus {
   outline: none;
-  /* border: 0.1rem solid; */
   box-shadow: 0.1rem 0.1rem 0.25rem var(--background-accent);
 }
 
@@ -427,6 +427,11 @@ input:checked + .slider:before {
 
 input:checked + .slider {
   background-color: var(--background-accent);
+}
+
+input::placeholder,
+textarea::placeholder{
+  color: var(--la-dark-gray);
 }
 
 .slider.round {

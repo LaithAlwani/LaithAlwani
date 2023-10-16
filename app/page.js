@@ -1,8 +1,8 @@
 import socialLinks from "../utils/SocialLinksList"
-import SocialLink from "./ui/SocialLink";
+import SocialLink from '../components/ui/SocialLink'
+import Link from "next/link"
 
-export default function Main() {
-
+export default function Home() { 
   return (
     <section className="section" id="home">
       {/* <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" priority /> */}
@@ -12,10 +12,10 @@ export default function Main() {
       <div className="main">
         <h1>Hello, I&apos;m Laith Alwani</h1>
         <p>
-          A Full Stack Developer with 3+ years experience with a background in Economics and Human Resources.
+          A Full Stack Developer with 4+ years experience with a background in Economics and Human Resources.
         </p>
-        <a href="#projects" className="btn p-3">Projects</a>
+        <Link href="projects" className="btn p-3">Projects</Link>
       </div>
     </section>
-  );
+  )
 }

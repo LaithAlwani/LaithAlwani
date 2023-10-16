@@ -1,12 +1,10 @@
 import Image from "next/image";
-import { projects } from "../utils/Projects";
-import Header from "./Header";
+import { projects } from "../../utils/Projects";
+import Header from "../../components/Header";
 
 export default function Projects() {
   return (
     <section className="section" id="projects">
-      {/* <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" /> */}
-
       <div className="container">
         <Header
           header="Projects"

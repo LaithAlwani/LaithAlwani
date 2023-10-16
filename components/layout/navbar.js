@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState, useCallback } from "react";
@@ -63,10 +64,10 @@ export default function Navbar() {
 const NavLinks = () => {
   return (
     <>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <Link href="/">Home</Link>
+      <Link href="about">About</Link>
+      <Link href="projects">Projects</Link>
+      <Link href="contact">Contact</Link>
     </>
   );
 };
