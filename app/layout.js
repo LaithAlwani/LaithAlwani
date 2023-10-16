@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Analytics } from '@vercel/analytics/react';
 import Image from "next/image";
 import Navbar from "../components/layout/navbar";
 import socialLinksList from "../utils/SocialLinksList";
@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <div className="content">{children}</div>
+        <Analytics />
         <Footer />
       </body>
     </html>
