@@ -72,7 +72,7 @@ const NavLinks = () => {
 };
 
 const ThemeComponent = () => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const toggleRef = useRef();
 
   const setDark = () => {
@@ -93,13 +93,15 @@ const ThemeComponent = () => {
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
-  }, []);
+    setIsDark(localStorage.getItem("theme") === "dark");
+  }, [toggleTheme]);
 
   return (
     <label className="toggle-theme">
       <input
         type="checkbox"
         ref={toggleRef}
+        defaultChecked={localStorage.getItem("theme") === "dark"}
         checked={isDark}
         onChange={toggleTheme}
       />
