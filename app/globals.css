@@ -67,8 +67,7 @@ label{
 .section {
   max-width: 60rem;
   min-height: 88vh;
-  padding-block: 4rem;
-  padding-inline: 1rem;
+  padding: 6rem 1rem 1rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -169,13 +168,19 @@ nav a:focus {
   background-color: var(--background-color);
   position: fixed;
   width: 100%;
+  max-height: 0;
   display: flex;
   flex-direction: column;
-  padding-block-start: 4rem;
-  
+  padding-block-start: 5rem;
+  transition: all 1s ease;
+  overflow-y: hidden;
+}
+.nav-mobile.open{
+  max-height: 500px;
 }
 .nav-mobile a {
   border-block-end: 0.1rem solid #bebebe;
+  padding-block: 1rem;
 }
 
 .nav-mobile a:last-child {

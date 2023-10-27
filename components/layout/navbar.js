@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState, useCallback } from "react";
@@ -47,16 +47,15 @@ export default function Navbar() {
           {!toggleMenu ? <MdMenu size={28} /> : <MdClose size={28} />}
         </button>
       </nav>
-      {toggleMenu && (
-        <div
-          className="nav-mobile"
-          onClick={(e) => {
-            e.stopPropagation();
-            setToggleMenu(!toggleMenu);
-          }}>
-          <NavLinks />
-        </div>
-      )}
+
+      <div
+        className={`nav-mobile ${toggleMenu ? "open" : ""}`}
+        onClick={(e) => {
+          e.stopPropagation();
+          setToggleMenu(!toggleMenu);
+        }}>
+        <NavLinks />
+      </div>
     </>
   );
 }
@@ -73,7 +72,7 @@ const NavLinks = () => {
 };
 
 const ThemeComponent = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const toggleRef = useRef();
 
   const setDark = () => {
@@ -88,19 +87,22 @@ const ThemeComponent = () => {
     setIsDark(false);
   };
 
-  const toggleTheme = useCallback((e) => {
-    if (toggleRef.current.checked) setDark();
-    else setLight();
-  },[toggleRef]);
+  const toggleTheme = () => {
+    toggleRef.current.checked ? setDark() : setLight();
+  };
 
   useEffect(() => {
-    setIsDark(localStorage.getItem("theme") === "dark" ? true : false);
     document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
-  }, [toggleTheme]);
+  }, []);
 
   return (
     <label className="toggle-theme">
-      <input type="checkbox" ref={toggleRef} checked={isDark} onChange={toggleTheme} />
+      <input
+        type="checkbox"
+        ref={toggleRef}
+        checked={isDark}
+        onChange={toggleTheme}
+      />
       <span className="slider round">
         <MdLightMode />
         <MdDarkMode />
