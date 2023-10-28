@@ -75,36 +75,24 @@ const ThemeComponent = () => {
   const [isDark, setIsDark] = useState(false);
   const toggleRef = useRef();
 
-
-  const setDark = () => {
-    localStorage.setItem("theme", "dark");
-    document.documentElement.setAttribute("data-theme", "dark");
-    setIsDark(true);
-  };
-
-  const setLight = () => {
-    localStorage.setItem("theme", "light");
-    document.documentElement.setAttribute("data-theme", "light");
-    setIsDark(false);
+  const setThemeMode = (mode) => {
+    localStorage.setItem("theme", mode);
+    document.documentElement.setAttribute("data-theme", mode);
+    mode === "dark" ? setIsDark(true) : setIsDark(false);
   };
 
   const toggleTheme = () => {
-    toggleRef.current.checked ? setDark() : setLight();
+    toggleRef.current.checked ? setThemeMode("dark") : setThemeMode("light");
   };
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
-    setIsDark(localStorage.getItem('theme'));
+    setIsDark(localStorage.getItem("theme") === "dark");
   }, []);
 
   return (
     <label className="toggle-theme">
-      <input
-        type="checkbox"
-        ref={toggleRef}
-        checked={isDark}
-        onChange={toggleTheme}
-      />
+      <input type="checkbox" ref={toggleRef} checked={isDark} onChange={toggleTheme} />
       <span className="slider round">
         <MdLightMode />
         <MdDarkMode />
