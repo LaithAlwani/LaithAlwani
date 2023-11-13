@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdMenu, MdClose, MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {

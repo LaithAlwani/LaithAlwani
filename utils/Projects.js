@@ -20,7 +20,7 @@ export const projects = [
     image: "/images/score.png",
     description:
       "a construction company based in Ottawa ON.",
-    technologies: [react, firebase, mui],
+    technologies: [next, mui],
     appLink: "https://www.scorerenovation.com/",
     repoLink: "https://github.com/LaithAlwani/score-renovation",
   },
