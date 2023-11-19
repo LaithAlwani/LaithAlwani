@@ -45,7 +45,7 @@ export default function Contact() {
       setName("");
       setEmail("");
       setMessage("");
-      setSuccess("Request Sent! Thank you");
+      setSuccess("This is just a form test!");
       setTimeout(() => {
         setSuccess("");
       }, 2000);
