@@ -11,21 +11,27 @@ export default function page() {
         />
         <div>
           <p>
-            Full stack web developer with Economics and HR backgrounds, Recently earned a
-            Certificate in Full Stack Development from Carleton University, with newly developed
-            skills in, React.js, JavaScript, HTML, CSS, MySQL, MongoDB and responsive web design.
+            A full-stack web developer with a background in Economics and HR, I bring over 4 years
+            of experience to the table. Recently, I earned a Full Stack Development Certificate from
+            Carleton University, showcasing my proficiency in React.js, JavaScript, HTML, CSS,
+            MySQL, MongoDB, and responsive web design.
           </p>
           <p>
-            Strengths in analyzing problems and building solutions, passionate about developing web
-            applications, with a focus on mobile-first design and development. With each project, my
-            aim is to Automate processes and use my skills to solve problems efficiently.
+            Known for my strengths in problem analysis and solution development, I am passionate
+            about crafting web applications with a mobile-first design approach. Each project I
+            undertake is driven by the goal to automate processes and efficiently solve challenges.
           </p>
           <p>
-            I Led a team of three to develop a single-page MERN app that helps team managers track
-            their players, workouts, schedule and attendance to special events. I’m excited to
-            leverage my skills as part of a fast-paced, quality-driven team to build better
-            experiences on the web, to learn more please check out my{" "}
-            <a href="./resume.docx" target="_blank" rel="noreferrer" className="cv-link">
+            With a leadership role under my belt, I successfully led a team of three in the
+            development of a single-page MERN app tailored for team managers to track players,
+            workouts, schedules, and event attendance. Excited to contribute my skills to a
+            fast-paced, quality-driven team, I am dedicated to building superior web experiences.
+            For a detailed overview, please refer to my resume.
+            <a
+              href="https://docs.google.com/document/d/1B6WerX9wRwKTOYkq_GHP3U0oDAGpZdTT/edit?usp=sharing&ouid=117539619851358162805&rtpof=true&sd=true"
+              target="_blank"
+              rel="noreferrer"
+              className="cv-link">
               resume
             </a>
           </p>
