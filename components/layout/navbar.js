@@ -21,22 +21,21 @@ export default function Navbar() {
   return (
     <>
       <nav>
-        <div className="logo">
-          <Link href="/">
-            <Image
-              src="/images/my-image.png"
-              alt="Laith Alwani"
-              id="avatar"
-              priority
-              width={48}
-              height={48}
-            />
-          </Link>
+        <Link href="/" className="logo">
+          <Image
+            src="/images/avatar.webp"
+            alt="Laith Alwani"
+            id="avatar"
+            priority
+            width={48}
+            height={48}
+          />
           <div className="my-title-container">
             <strong>Laith Alwani</strong>
             <em>Full Stack Developer</em>
           </div>
-        </div>
+        </Link>
+
         <div className="nav-links">
           <NavLinks />
         </div>
@@ -63,13 +62,20 @@ export default function Navbar() {
 
 const NavLinks = () => {
   const pathname = usePathname();
-  console.log("pathname ", pathname);
   return (
     <>
-      <Link href="/" className={pathname === "/" ? "active" :""}>Home</Link>
-      <Link href="about" className={pathname === "/about" ? "active" :""}>About</Link>
-      <Link href="projects" className={pathname === "/projects" ? "active" :""}>Projects</Link>
-      <Link href="contact" className={pathname === "/contact" ? "active" :""}>Contact</Link>
+      <Link href="/" className={pathname === "/" ? "active" : ""}>
+        Home
+      </Link>
+      <Link href="about" className={pathname === "/about" ? "active" : ""}>
+        About
+      </Link>
+      <Link href="projects" className={pathname === "/projects" ? "active" : ""}>
+        Projects
+      </Link>
+      <Link href="contact" className={pathname === "/contact" ? "active" : ""}>
+        Contact
+      </Link>
     </>
   );
 };

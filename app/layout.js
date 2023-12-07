@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 const Footer = () => {
   return (
     <footer>
-      <Image src="/images/logo_300dpi.png" width={48} height={48} alt="logo" />
+      <Image src="/images/logo_300dpi.webp" width={48} height={48} alt="logo" />
       <ul>
         {socialLinksList.map((link, i) => (
           <li key={i}>

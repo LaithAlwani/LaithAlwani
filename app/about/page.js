@@ -26,7 +26,9 @@ export default function page() {
             development of a single-page MERN app tailored for team managers to track players,
             workouts, schedules, and event attendance. Excited to contribute my skills to a
             fast-paced, quality-driven team, I am dedicated to building superior web experiences.
-            For a detailed overview, please refer to my resume.
+          </p>
+          <p>
+            For a detailed overview, please refer to my{" "}
             <a
               href="https://docs.google.com/document/d/1B6WerX9wRwKTOYkq_GHP3U0oDAGpZdTT/edit?usp=sharing&ouid=117539619851358162805&rtpof=true&sd=true"
               target="_blank"
@@ -34,6 +36,7 @@ export default function page() {
               className="cv-link">
               resume
             </a>
+            .
           </p>
         </div>
         <div className="skills">
