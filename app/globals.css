@@ -38,8 +38,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  padding: 0.5rem;
-  font-weight: 700;
+  padding: 0.75rem;
 }
 
 h1,
@@ -77,9 +76,6 @@ label {
 .container {
   width: 100%;
   padding: 1rem;
-  background-color: var(--background-color);
-  border-radius: var(--border-radius);
-  box-shadow: 0.1rem 0.1rem 0.5rem var(--background-accent);
 }
 
 .btn {
@@ -112,10 +108,10 @@ nav {
 }
 
 nav a:hover,
-nav a:focus {
-  color: var(--la-light-green);
-  background-color: var(--la-black);
-  border-radius: 0.5rem;
+nav a:focus,
+.active {
+  transform: scale(1.2);
+  font-weight: bold;
 }
 
 .logo {
@@ -171,15 +167,20 @@ nav a:focus {
   display: flex;
   flex-direction: column;
   padding-block-start: 5rem;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   overflow-y: hidden;
+  z-index: 1;
+  
 }
+
 .nav-mobile.open {
   max-height: 500px;
+  border-bottom: 0.1rem solid;
 }
+
 .nav-mobile a {
-  border-block-end: 0.1rem solid #bebebe;
-  padding-block: 1rem;
+  padding-block: 0.75rem;
+  width: 0;
 }
 
 .nav-mobile a:last-child {
