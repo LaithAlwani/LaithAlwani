@@ -65,7 +65,9 @@ label {
 .section {
   max-width: 60rem;
   min-height: 88vh;
-  padding: 6rem 1rem 1rem;
+  padding-block-start: 6rem;
+  padding-block-end: 1rem;
+  padding-inline: 4rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -75,7 +77,6 @@ label {
 
 .container {
   width: 100%;
-  padding: 1rem;
 }
 
 .btn {
@@ -353,13 +354,12 @@ footer {
 }
 
 footer ul {
+  position: fixed;
+  top: 33%;
+  left: 0;
   list-style: none;
-  width: 15rem;
   padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  margin-inline: auto;
+  background-color: transparent;
 }
 
 footer span {
@@ -380,8 +380,17 @@ footer span {
   .mobile-nav-button {
     display: flex;
   }
+  .section{
+    padding-inline:1rem
+  }
   .btn {
     width: 100%;
+  }
+  footer>ul{
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 }
 
