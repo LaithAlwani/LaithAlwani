@@ -64,8 +64,10 @@ label {
 
 .section {
   max-width: 60rem;
-  min-height: 88vh;
-  padding: 6rem 1rem 1rem;
+  min-height: 90vh;
+  padding-block-start: 6rem ;
+  padding-block-end: 1rem ;
+  padding-inline: 4rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -75,7 +77,6 @@ label {
 
 .container {
   width: 100%;
-  padding: 1rem;
 }
 
 .btn {
@@ -353,13 +354,20 @@ footer {
 }
 
 footer ul {
-  list-style: none;
+  /* list-style: none;
   width: 15rem;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
-  margin-inline: auto;
+  margin-inline: auto; */
+
+  position: fixed;
+  top: 33%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  background-color: transparent;
 }
 
 footer span {
@@ -373,6 +381,9 @@ footer span {
   #main {
     width: 100%;
   }
+  .section{
+    padding-inline: 1rem
+  }
   .nav-links,
   .social-links-main {
     display: none;
@@ -382,6 +393,18 @@ footer span {
   }
   .btn {
     width: 100%;
+  }
+  footer>ul{
+  position: relative;
+  width: 15rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  }
+  footer>ul a{
+    padding: 0 0.5rem;
   }
 }
 
