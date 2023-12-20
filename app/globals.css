@@ -313,6 +313,9 @@ label {
   font-weight: 700;
   margin-block-end: 1rem;
 }
+form .btn{
+  float:right
+}
 .message-length {
   display: block;
   padding-block-end: 1rem;
