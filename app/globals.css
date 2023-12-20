@@ -373,6 +373,9 @@ footer span {
   #main {
     width: 100%;
   }
+  .section{
+    padding-inline: 1rem
+  }
   .nav-links,
   .social-links-main {
     display: none;
