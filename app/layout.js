@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <link rel="andriod-touch-icon" href="/images/logo.png" />
       </Head>
-      <Analytics />
+      
       <html lang="en">
         <body>
           <Navbar />
