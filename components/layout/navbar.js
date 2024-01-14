@@ -67,13 +67,13 @@ const NavLinks = () => {
       <Link href="/" className={pathname === "/" ? "active" : ""}>
         Home
       </Link>
-      <Link href="about" className={pathname === "/about" ? "active" : ""}>
+      <Link href="/about" className={pathname === "/about" ? "active" : ""}>
         About
       </Link>
-      <Link href="projects" className={pathname === "/projects" ? "active" : ""}>
+      <Link href="/projects" className={pathname === "/projects" ? "active" : ""}>
         Projects
       </Link>
-      <Link href="contact" className={pathname === "/contact" ? "active" : ""}>
+      <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
         Contact
       </Link>
     </>
