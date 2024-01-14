@@ -64,9 +64,9 @@ label {
 
 .section {
   max-width: 60rem;
-  min-height: 90vh;
-  padding-block-start: 6rem ;
-  padding-block-end: 1rem ;
+  min-height: 88vh;
+  padding-block-start: 6rem;
+  padding-block-end: 1rem;
   padding-inline: 4rem;
   margin-inline: auto;
   display: flex;
@@ -313,6 +313,9 @@ label {
   font-weight: 700;
   margin-block-end: 1rem;
 }
+form .btn{
+  float:right
+}
 .message-length {
   display: block;
   padding-block-end: 1rem;
@@ -354,14 +357,6 @@ footer {
 }
 
 footer ul {
-  /* list-style: none;
-  width: 15rem;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  margin-inline: auto; */
-
   position: fixed;
   top: 33%;
   left: 0;
@@ -391,20 +386,17 @@ footer span {
   .mobile-nav-button {
     display: flex;
   }
+  .section{
+    padding-inline:1rem
+  }
   .btn {
     width: 100%;
   }
   footer>ul{
-  position: relative;
-  width: 15rem;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  margin-inline: auto;
-  }
-  footer>ul a{
-    padding: 0 0.5rem;
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 }
 
