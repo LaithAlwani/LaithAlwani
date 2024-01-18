@@ -8,7 +8,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Laith Alwani",
-  description: "Desinge the next great web site",
+  description: "Design the next great website",
 };
 
 export default function RootLayout({ children }) {
