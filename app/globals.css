@@ -33,6 +33,11 @@ body {
   color: var(--font-color);
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 a {
@@ -64,7 +69,7 @@ label {
 
 .section {
   max-width: 60rem;
-  min-height: 88vh;
+  height: 100%;
   padding-block-start: 6rem;
   padding-block-end: 1rem;
   padding-inline: 4rem;
@@ -98,7 +103,7 @@ label {
 /*Navbar*/
 nav {
   background-color: var(--background-color);
-  position: fixed;
+  /* position: fixed; */
   padding: 0;
   width: 100%;
   left: 0;
