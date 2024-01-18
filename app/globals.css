@@ -116,7 +116,6 @@ nav {
 .nav-links a:hover,
 .nav-links a:focus,
 .active {
-  transform: scale(1.2);
   font-weight: bold;
 }
 
@@ -186,7 +185,7 @@ nav {
 
 .nav-mobile a {
   padding-block: 0.75rem;
-  width: 0;
+  width: 100%;
 }
 
 .nav-mobile a:last-child {

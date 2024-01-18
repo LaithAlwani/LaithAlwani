@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Header from "../../components/Header";
 
-export default function Contact() {
+export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");

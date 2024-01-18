@@ -2,7 +2,7 @@ import Image from "next/image";
 import { projects } from "../../utils/Projects";
 import Header from "../../components/Header";
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
     <section className="section" id="projects">
       <div className="container">

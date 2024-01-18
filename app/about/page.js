@@ -1,7 +1,7 @@
 import Header from "../../components/Header";
 import { frameworks, languages, databases, devOps } from "../../utils/Projects";
 
-export default function page() {
+export default function AboutPage() {
   return (
     <section className="section" id="about">
       <div className="container">
