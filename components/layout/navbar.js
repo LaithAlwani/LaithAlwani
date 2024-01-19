@@ -8,15 +8,15 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  // useEffect(() => {
-  //   window.addEventListener("resize", () => {
-  //     if (window.innerWidth > 768) {
-  //       setToggleMenu(false);
-  //     }
-  //   });
-  //   //remove listner
-  //   return () => window.removeEventListener("resize", () => null);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) {
+        setToggleMenu(false);
+      }
+    });
+    //remove listner
+    return () => window.removeEventListener("resize", () => null);
+  }, []);
 
   return (
     <>

@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Laith Alwani, laithalwani@gmail.com"></meta>
         <meta
           name="description"
-          content="01/27/2022 - A Full Stack web developer with 4+ years of experience, agile scrum, MVC structure works with React js, and Node js and non-SQL database "
+          content="A Full Stack web developer with 4+ years of experience, agile scrum, MVC structure works with React js, and Node js and non-SQL database "
         />
         <meta name="keywords" content="html, css, javascript, web development, react js" />
         <meta name="theme-color" content="#f2f2f2"></meta>
