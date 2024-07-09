@@ -1,10 +1,7 @@
-import socialLinks from "../utils/SocialLinksList";
-import SocialLink from "../components/ui/SocialLink";
-
 export default function Home() {
   return (
     <section className="section" id="home">
-      {/* <Image src="/images/green-bg.svg" alt="" fill objectFit="cover" priority /> */}
+      
       <div className="main">
         <h1>Hello, I&apos;m Laith Alwani</h1>
         <p>
