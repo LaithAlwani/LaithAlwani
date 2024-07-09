@@ -103,8 +103,7 @@ label {
 
 /*Navbar*/
 nav {
-  background-color: transparent;
-  /* background-color: var(--background-color); */
+  background-color: var(--background-color);
   position: fixed;
   padding: 0;
   width: 100%;
