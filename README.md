@@ -32,11 +32,9 @@ Here are a few projects I’m proud of. (Click to view)
 | Project | Description | Tech Stack |
 |--------|---------------------------|-------------------------|
 | **Meepletron** | A board-game helper / dice-roller / tracker app | React, Node.js, Express, MongoDB |
-| **Recipe Book** | A web app for browsing, saving, and sharing cooking recipes | React, CSS, REST APIs |
-| **Feed the Kraken** | A fun JavaScript / puzzle / game project | Vanilla JS, HTML, CSS |
-| **Avalon** | (Your project) | (List techs) |
-
-> 🛠️ *Tip:* For each project, include a screenshot (embedded via Markdown) or a link to a live demo.
+| **Recipe Book** | A web app for browsing, saving, and sharing cooking recipes | Flutter, Firebase |
+| **Feed the Kraken** | A board game Companion App  / game project | Next js, Mongodb Socket.io, |
+| **Avalon** | A board game Companion App  / game project | Next js, Mongodb Socket.io, |
 
 ---
 
@@ -51,7 +49,7 @@ Some fun stats:
 
 ## 🎯 Goals & What I’m Working On
 
-- Deepening knowledge in **TypeScript**, **GraphQL**, and **Next.js / serverless apps**  
+- Deepening knowledge in **Next.js**, **TypeScript** and **Flutter**  
 - Building a few open-source tools/utilities to help devs with UI or data processing  
 - Collaborating on projects that make a real-world impact
 
@@ -59,9 +57,9 @@ Some fun stats:
 
 ## 📫 Let’s Connect
 
-- Email: **your.email@example.com**  
+- Email: **laithalwani@gmail.com**  
 - Website / Portfolio: [www.laithalwani.ca](https://www.laithalwani.ca)  
-- LinkedIn: your LinkedIn profile  
+- LinkedIn: https://www.linkedin.com/in/laith-alwani  
 - Twitter / X: @Laitho15  
 
 ---
