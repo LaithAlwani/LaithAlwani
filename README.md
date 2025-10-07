@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hi, I’m Laith 👋
 
-## Getting Started
+[![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fwww.laithalwani.ca)](https://www.laithalwani.ca)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/your-linkedin)  
+[![GitHub followers](https://img.shields.io/github/followers/LaithAlwani?label=Follow&style=social)](https://github.com/LaithAlwani)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 🧭 About Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I’m a **full-stack web developer** passionate about turning complex problems into clean, user-friendly solutions. I have hands-on experience with **HTML, CSS, JavaScript, React, Node.js, Express, MongoDB** (the MERN stack), and I've also worked with jQuery and REST APIs.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- 📍 Based in Ottawa, Canada  
+- 💡 I enjoy working on side projects that push my limits, especially in web apps & automation  
+- 🚀 Always learning the latest in frontend, backend, and tooling  
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🛠️ Tech Stack & Tools
 
-## Learn More
+| Frontend | Backend / DB | Tools / Others |
+|----------|----------------|------------------|
+| React, HTML, CSS, jQuery | Node.js, Express, MongoDB | Git, GitHub, VS Code, REST APIs |
+| (You can add Flutter, etc., if relevant) | | |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Featured Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Here are a few projects I’m proud of. (Click to view)
 
-## Deploy on Vercel
+| Project | Description | Tech Stack |
+|--------|---------------------------|-------------------------|
+| **Meepletron** | A board-game helper / dice-roller / tracker app | React, Node.js, Express, MongoDB |
+| **Recipe Book** | A web app for browsing, saving, and sharing cooking recipes | React, CSS, REST APIs |
+| **Feed the Kraken** | A fun JavaScript / puzzle / game project | Vanilla JS, HTML, CSS |
+| **Avalon** | (Your project) | (List techs) |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> 🛠️ *Tip:* For each project, include a screenshot (embedded via Markdown) or a link to a live demo.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## 📈 GitHub Stats & Activity
+
+Some fun stats:
+
+![Laith’s GitHub stats](https://github-readme-stats.vercel.app/api?username=LaithAlwani&show_icons=true&theme=radical)  
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LaithAlwani&layout=compact&theme=radical)
+
+---
+
+## 🎯 Goals & What I’m Working On
+
+- Deepening knowledge in **TypeScript**, **GraphQL**, and **Next.js / serverless apps**  
+- Building a few open-source tools/utilities to help devs with UI or data processing  
+- Collaborating on projects that make a real-world impact
+
+---
+
+## 📫 Let’s Connect
+
+- Email: **your.email@example.com**  
+- Website / Portfolio: [www.laithalwani.ca](https://www.laithalwani.ca)  
+- LinkedIn: your LinkedIn profile  
+- Twitter / X: @Laitho15  
+
+---
+
+> “I enjoy problem solving and taking on tough challenges and turning them into simple clean solutions.”  
+> — *My personal motto*
+
+---
+
