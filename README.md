@@ -21,8 +21,8 @@ I’m a **full-stack web developer** passionate about turning complex problems i
 | Frontend | Backend / DB | Tools / Others |
 |-----|-----------|-----------|
 | React, Next.js  | Node.js, Express, | Git, GitHub, VS Code, REST APIs |
-| JaveScript /TYpeScript HTML, CSS, jQuery|  MongoDB, SQL
-| Flutter | Firebase, Vercel |             
+| JaveScript /TYpeScript HTML, CSS, jQuery|  MongoDB, SQL |Git, Github, GitLab|
+| Flutter | Firebase, Vercel | Goolge Cloud, AWS|           
 ---
 
 ## 📂 Featured Projects
