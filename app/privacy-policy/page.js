@@ -8,10 +8,10 @@ export default function PrivacyPolicy() {
       <p><strong>Effective Date:</strong> November 27, 2025</p>
 
       <p>
-        This Privacy Policy explains how <strong>Laith Alwani</strong> ("I", "me", or "my") 
+        This Privacy Policy explains how <strong>Laith Alwani</strong> (&quot;I&quot;, &quot;me&quot;, or &quot;my&quot;) 
         collects, uses, and protects information when you access or use my personal website 
-        built using Next.js (the "Website"). If you use any mobile apps I publish on Google Play, 
-        this policy also explains how data collection aligns with Google Play’s Data Safety 
+        built using Next.js (the &quot;Website&quot;). If you use any mobile apps I publish on Google Play, 
+        this policy also explains how data collection aligns with Google Play&quot;s Data Safety 
         requirements. By using the Website or any connected services, you consent to this Policy.
       </p>
 
