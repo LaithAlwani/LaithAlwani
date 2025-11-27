@@ -75,6 +75,9 @@ const NavLinks = () => {
       <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
         Contact
       </Link>
+      <Link href="/privacy-policy" className={pathname === "/privacy-policy" ? "active" : ""}>
+        Privacy
+      </Link>
     </>
   );
 };
