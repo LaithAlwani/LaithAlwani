@@ -62,6 +62,7 @@ Created as both a learning experiment and a functional prototype, Meepletron hig
     tags: ["Next.js", "TypeScript", "Open AI", "Gemini", "Mongodb", "Clerk", "AWS"],
     github: "https://github.com/LaithAlwani/meepletron",
     live: "https://meepletron.com",
+    image:"/images/meepletron.webp",
     featured: true,
     year: 2024,
   },

@@ -39,28 +39,17 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Avatar + info column */}
             <div className="lg:col-span-2">
+              {/* Avatar */}
               <div className="aspect-square max-w-xs lg:max-w-none rounded-3xl relative overflow-hidden shadow-xl shadow-amber-500/10">
                 <Image
                   src="/images/laith.webp"
                   alt="Laith Alwani"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 400px"
                   priority
                 />
               </div>
-              {/* Avatar placeholder — replace with Next.js <Image> once you have a photo */}
-              {/* <Image src={'/images/laith.webp'} alt='laith alwani' width={300} height={400}/>
-              <div className="aspect-square max-w-xs lg:max-w-none rounded-3xl bg-linear-to-br from-amber-400 via-orange-400 to-pink-500 relative overflow-hidden shadow-xl shadow-amber-500/10">
-                <div className="absolute inset-0 bg-black/10" />
-                <div
-                  className="absolute inset-0 opacity-20"
-                  style={{
-                    backgroundImage:
-                      'radial-gradient(circle at 25% 25%, rgba(255,255,255,.3) 0%, transparent 50%)',
-                  }}
-                />
-              </div> */}
 
               {/* Quick facts */}
               <div className="mt-6 space-y-3">
