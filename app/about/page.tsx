@@ -29,10 +29,10 @@ export default function AboutPage() {
       {/* ── About ── */}
       <SectionWrapper>
         <section className="mb-28">
-          <p className="text-amber-500 dark:text-amber-400 font-mono text-sm font-medium mb-2">
+          <p className="text-accent font-mono text-sm font-medium mb-2">
             About Me
           </p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-14">
+          <h1 className="text-4xl sm:text-5xl font-bold text-content mb-14">
             Hey, I&apos;m {personalInfo.name}.
           </h1>
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
             {/* Avatar + info column */}
             <div className="lg:col-span-2">
               {/* Avatar */}
-              <div className="aspect-square max-w-xs lg:max-w-none rounded-3xl relative overflow-hidden shadow-xl shadow-amber-500/10">
+              <div className="aspect-square max-w-xs lg:max-w-none rounded-3xl relative overflow-hidden shadow-xl shadow-accent/10">
                 <Image
                   src="/images/laith.webp"
                   alt="Laith Alwani"
@@ -63,11 +63,11 @@ export default function AboutPage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-amber-500 shrink-0">
+                    className="text-accent shrink-0">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  <span className="text-slate-600 dark:text-slate-400">
+                  <span className="text-content-muted">
                     {personalInfo.location}
                   </span>
                 </div>
@@ -81,11 +81,11 @@ export default function AboutPage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-amber-500 shrink-0">
+                    className="text-accent shrink-0">
                     <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                   </svg>
-                  <span className="text-slate-600 dark:text-slate-400">{personalInfo.title}</span>
+                  <span className="text-content-muted">{personalInfo.title}</span>
                 </div>
                 {personalInfo.available && (
                   <div className="flex items-center gap-3 text-sm">
@@ -110,7 +110,7 @@ export default function AboutPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={link.label}
-                        className="p-3 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/40 dark:hover:border-amber-400/40 hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-all">
+                        className="p-3 rounded-xl border border-edge text-content-muted hover:text-accent hover:border-accent/40 hover:bg-accent-subtle transition-all">
                         <Icon />
                       </a>
                     );
@@ -121,7 +121,7 @@ export default function AboutPage() {
             {/* Bio */}
             <div className="lg:col-span-3 space-y-5 pt-1">
               {personalInfo.bio.map((paragraph, i) => (
-                <p key={i} className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                <p key={i} className="text-content-muted leading-relaxed text-lg">
                   {paragraph}
                 </p>
               ))}
@@ -133,14 +133,14 @@ export default function AboutPage() {
       {/* ── Skills ── */}
       <SectionWrapper>
         <section className="mb-28">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">
+          <h2 className="text-2xl font-bold text-content mb-8">
             Skills &amp; Technologies
           </h2>
           <div className="flex flex-wrap gap-2.5">
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 text-sm font-mono text-slate-600 dark:text-slate-300 hover:border-amber-400/50 dark:hover:border-amber-400/40 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-all cursor-default select-none">
+                className="px-4 py-2 rounded-full border border-edge bg-surface-card text-sm font-mono text-content-muted hover:border-accent/50 hover:text-accent hover:bg-accent-subtle transition-all cursor-default select-none">
                 {skill}
               </span>
             ))}
@@ -154,20 +154,20 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Contact info */}
             <div className="lg:col-span-2">
-              <p className="text-amber-500 dark:text-amber-400 font-mono text-sm font-medium mb-2">
+              <p className="text-accent font-mono text-sm font-medium mb-2">
                 Get In Touch
               </p>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl font-bold text-content mb-4">
                 Let&apos;s talk
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+              <p className="text-content-muted leading-relaxed mb-8">
                 Have a project in mind? Want to collaborate? Or just want to say hi? My inbox is
                 always open.
               </p>
 
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center gap-2 text-sm font-medium text-amber-500 dark:text-amber-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors">
+                className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover transition-colors">
                 <svg
                   width="16"
                   height="16"

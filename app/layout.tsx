@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased font-sans transition-colors duration-300">
+      <body className="min-h-screen bg-surface text-content antialiased font-sans transition-colors duration-300">
         <ThemeProvider>
           <Navbar />
           <main className="min-h-screen">{children}</main>

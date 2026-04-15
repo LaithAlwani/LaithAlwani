@@ -3,22 +3,93 @@
 /* ─── Class-based dark mode for Tailwind v4 ─── */
 @variant dark (&:where(.dark, .dark *));
 
-/* ─── Custom theme tokens ─── */
-@theme {
+/* ════════════════════════════════════════════════════════════════
+   COLOR TOKENS — edit only this block to change the color scheme
+   ════════════════════════════════════════════════════════════════
+
+   ACCENT SWAPS (replace the hex values below):
+     Amber (current) → #f59e0b / #d97706 / #fbbf24
+     Blue            → #3b82f6 / #2563eb / #60a5fa
+     Emerald         → #10b981 / #059669 / #34d399
+     Violet          → #8b5cf6 / #7c3aed / #a78bfa
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Accent — the brand color */
+  --accent:         #f59e0b;   /* amber-500  → main accent          */
+  --accent-hover:   #d97706;   /* amber-600  → darker on hover      */
+  --accent-subtle:  #fffbeb;   /* amber-50   → tinted bg            */
+  --accent-fg:      #0f172a;   /* always-dark text on accent bg     */
+
+  /* Surfaces */
+  --surface:        #f8fafc;   /* slate-50   → page background      */
+  --surface-card:   #ffffff;   /*              card / panel bg      */
+  --surface-muted:  #f1f5f9;   /* slate-100  → stripe sections      */
+  --surface-input:  #f1f5f9;   /* slate-100  → form inputs          */
+
+  /* Text */
+  --content:        #0f172a;   /* slate-900  → headings / body      */
+  --content-muted:  #64748b;   /* slate-500  → secondary text       */
+  --content-sub:    #94a3b8;   /* slate-400  → placeholder / meta   */
+
+  /* Borders */
+  --edge:           #e2e8f0;   /* slate-200  → default border       */
+  --edge-strong:    #cbd5e1;   /* slate-300  → stronger border      */
+}
+
+.dark {
+  /* Accent */
+  --accent:         #fbbf24;   /* amber-400  → lighter on dark bg   */
+  --accent-hover:   #f59e0b;   /* amber-500                         */
+  --accent-subtle:  #1c1408;   /* very dark amber tint              */
+  --accent-fg:      #0f172a;
+
+  /* Surfaces */
+  --surface:        #020617;   /* slate-950                         */
+  --surface-card:   #0f172a;   /* slate-900                         */
+  --surface-muted:  #0f172a;   /* slate-900                         */
+  --surface-input:  #1e293b;   /* slate-800                         */
+
+  /* Text */
+  --content:        #f1f5f9;   /* slate-100                         */
+  --content-muted:  #94a3b8;   /* slate-400                         */
+  --content-sub:    #64748b;   /* slate-500                         */
+
+  /* Borders */
+  --edge:           #1e293b;   /* slate-800                         */
+  --edge-strong:    #334155;   /* slate-700                         */
+}
+
+/* ─── Expose tokens as Tailwind utilities ─── */
+@theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Named animations */
-  --animate-blob: blob 9s ease-in-out infinite;
-  --animate-fade-up: fade-up 0.6s ease both;
-  --animate-fade-in: fade-in 0.5s ease both;
-  --animate-slide-in: slide-in 0.5s ease both;
+  /* Colors — generates bg-*, text-*, border-*, etc. */
+  --color-accent:        var(--accent);
+  --color-accent-hover:  var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-fg:     var(--accent-fg);
+  --color-surface:       var(--surface);
+  --color-surface-card:  var(--surface-card);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-input: var(--surface-input);
+  --color-content:       var(--content);
+  --color-content-muted: var(--content-muted);
+  --color-content-sub:   var(--content-sub);
+  --color-edge:          var(--edge);
+  --color-edge-strong:   var(--edge-strong);
+
+  /* Animations */
+  --animate-blob:      blob 9s ease-in-out infinite;
+  --animate-fade-up:   fade-up 0.6s ease both;
+  --animate-fade-in:   fade-in 0.5s ease both;
+  --animate-slide-in:  slide-in 0.5s ease both;
 }
 
 /* ─── Keyframes ─── */
 @keyframes blob {
-  0%,
-  100% {
+  0%, 100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     transform: scale(1) translate(0, 0);
   }
@@ -33,61 +104,33 @@
 }
 
 @keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 /* ─── Scroll-reveal utility ─── */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
-
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* ─── Custom scrollbar ─── */
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #475569;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
-}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--edge-strong); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--content-muted); }

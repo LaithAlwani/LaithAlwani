@@ -14,42 +14,25 @@ const LinkedinIcon = () => (
 )
 
 const EmailIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
     <polyline points="22,6 12,13 2,6" />
   </svg>
 )
 
-const icons = {
-  github: GithubIcon,
-  linkedin: LinkedinIcon,
-  email: EmailIcon,
-}
+const icons = { github: GithubIcon, linkedin: LinkedinIcon, email: EmailIcon }
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-800">
+    <footer className="border-t border-edge">
       <div className="max-w-5xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <Link
-              href="/"
-              className="font-bold text-lg text-slate-900 dark:text-white hover:text-amber-500 dark:hover:text-amber-400 transition-colors"
-            >
-              Laith<span className="text-amber-500 dark:text-amber-400">.</span>
+            <Link href="/" className="font-bold text-lg text-content hover:text-accent transition-colors">
+              Laith<span className="text-accent">.</span>
             </Link>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-              Building things for the web.
-            </p>
+            <p className="text-sm text-content-muted mt-1">Building things for the web.</p>
           </div>
 
           <div className="flex items-center gap-3">
@@ -62,7 +45,7 @@ export function Footer() {
                   target={link.icon !== 'email' ? '_blank' : undefined}
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="p-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-amber-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+                  className="p-2.5 rounded-xl text-content-muted hover:text-accent hover:bg-surface-muted transition-all"
                 >
                   <Icon />
                 </a>
@@ -71,21 +54,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800/60 flex flex-col md:flex-row items-center justify-between gap-2 text-sm text-slate-400 dark:text-slate-500">
-          <p>
-            © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
-          </p>
+        <div className="mt-8 pt-8 border-t border-edge flex flex-col md:flex-row items-center justify-between gap-2 text-sm text-content-sub">
+          <p>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
           <div className="flex gap-6">
             {[
               { href: '/', label: 'Home' },
               { href: '/projects', label: 'Projects' },
               { href: '/about', label: 'About' },
             ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
-              >
+              <Link key={link.href} href={link.href}
+                className="hover:text-content-muted transition-colors">
                 {link.label}
               </Link>
             ))}

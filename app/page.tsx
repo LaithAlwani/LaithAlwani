@@ -23,17 +23,13 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden isolate">
         {/* Animated gradient blobs */}
         <div className="absolute top-[-10%] right-[-5%] w-125 h-125 rounded-full bg-amber-400/20 dark:bg-amber-500/10 blur-3xl animate-blob pointer-events-none" />
-        <div
-          className="absolute bottom-[10%] left-[-10%] w-100 h-100 rounded-full bg-violet-500/15 dark:bg-violet-500/10 blur-3xl animate-blob pointer-events-none"
-          style={{ animationDelay: '3s' }}
-        />
-        <div
-          className="absolute top-[40%] left-[40%] w-75 h-75 rounded-full bg-sky-400/10 dark:bg-sky-500/8 blur-3xl animate-blob pointer-events-none"
-          style={{ animationDelay: '6s' }}
-        />
+        <div className="absolute bottom-[10%] left-[-10%] w-100 h-100 rounded-full bg-violet-500/15 dark:bg-violet-500/10 blur-3xl animate-blob pointer-events-none"
+          style={{ animationDelay: '3s' }} />
+        <div className="absolute top-[40%] left-[40%] w-75 h-75 rounded-full bg-sky-400/10 dark:bg-sky-500/8 blur-3xl animate-blob pointer-events-none"
+          style={{ animationDelay: '6s' }} />
 
         <div className="relative max-w-5xl mx-auto px-6 pt-32 pb-24 w-full">
           {/* Available badge */}
@@ -44,70 +40,44 @@ export default function HomePage() {
             </div>
           )}
 
-          {/* Main headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6 animate-fade-up">
+          {/* Headline */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-content leading-[1.1] mb-6 animate-fade-up">
             I build things for{' '}
-            <span className="bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-accent to-orange-500 bg-clip-text text-transparent">
               the web.
             </span>
           </h1>
 
-          <p
-            className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-10 animate-fade-up"
-            style={{ animationDelay: '0.1s' }}
-          >
+          <p className="text-xl text-content-muted max-w-2xl leading-relaxed mb-10 animate-fade-up"
+            style={{ animationDelay: '0.1s' }}>
             {personalInfo.subheadline}
           </p>
 
-          {/* CTA buttons */}
-          <div
-            className="flex flex-wrap gap-4 mb-14 animate-fade-up"
-            style={{ animationDelay: '0.2s' }}
-          >
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold transition-all hover:shadow-lg hover:shadow-amber-500/25 active:scale-95"
-            >
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 mb-14 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <Link href="/projects"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent hover:bg-accent-hover text-accent-fg font-semibold transition-all hover:shadow-lg hover:shadow-accent/25 active:scale-95">
               View My Work
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
-            <Link
-              href="/about#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:border-amber-400/60 dark:hover:border-amber-400/60 hover:text-amber-600 dark:hover:text-amber-400 transition-all"
-            >
+            <Link href="/about#contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-edge-strong text-content-muted font-semibold hover:border-accent/60 hover:text-accent transition-all">
               Get in Touch
             </Link>
           </div>
 
           {/* Social links */}
-          <div
-            className="flex items-center gap-6 animate-fade-up"
-            style={{ animationDelay: '0.3s' }}
-          >
+          <div className="flex items-center gap-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
             {socialLinks
               .filter((l) => l.icon !== 'email')
               .map((link) => {
                 const Icon = socialIcons[link.icon as keyof typeof socialIcons]
                 return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-amber-400 transition-colors"
-                  >
+                  <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-content-muted hover:text-accent transition-colors">
                     <Icon />
                     <span>{link.label}</span>
                   </a>
@@ -117,17 +87,9 @@ export default function HomePage() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400 dark:text-slate-600 animate-bounce">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-content-sub animate-bounce">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="6 9 12 15 18 9" />
           </svg>
         </div>
@@ -138,30 +100,15 @@ export default function HomePage() {
         <SectionWrapper>
           <div className="flex items-end justify-between mb-12">
             <div>
-              <p className="text-amber-500 dark:text-amber-400 font-mono text-sm font-medium mb-2">
-                Selected Work
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
-                Featured Projects
-              </h2>
+              <p className="text-accent font-mono text-sm font-medium mb-2">Selected Work</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-content">Featured Projects</h2>
             </div>
-            <Link
-              href="/projects"
-              className="hidden sm:flex items-center gap-1.5 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-amber-500 dark:hover:text-amber-400 transition-colors shrink-0"
-            >
+            <Link href="/projects"
+              className="hidden sm:flex items-center gap-1.5 text-sm font-medium text-content-muted hover:text-accent transition-colors shrink-0">
               All projects
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
           </div>
@@ -173,23 +120,12 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 text-center sm:hidden">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 text-sm font-medium text-amber-500 dark:text-amber-400 transition-colors"
-            >
+            <Link href="/projects"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent transition-colors">
               View all projects
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
           </div>
@@ -197,21 +133,17 @@ export default function HomePage() {
       </section>
 
       {/* ── Skills ── */}
-      <section className="border-y border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900/40">
+      <section className="border-y border-edge bg-surface-muted">
         <div className="max-w-5xl mx-auto px-6 py-20">
           <SectionWrapper>
-            <p className="text-amber-500 dark:text-amber-400 font-mono text-sm font-medium mb-2 text-center">
-              Tech Stack
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            <p className="text-accent font-mono text-sm font-medium mb-2 text-center">Tech Stack</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-content mb-12 text-center">
               What I work with
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
               {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 text-sm font-mono text-slate-600 dark:text-slate-300 hover:border-amber-400/50 dark:hover:border-amber-400/40 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/20 transition-all cursor-default select-none"
-                >
+                <span key={skill}
+                  className="px-4 py-2 rounded-full border border-edge bg-surface-card text-sm font-mono text-content-muted hover:border-accent/50 hover:text-accent hover:bg-accent-subtle transition-all cursor-default select-none">
                   {skill}
                 </span>
               ))}
@@ -224,34 +156,21 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-6 py-28 text-center">
         <SectionWrapper>
           <div className="relative max-w-xl mx-auto">
-            <div className="absolute inset-0 -m-8 rounded-3xl bg-linear-to-b from-amber-500/5 to-transparent pointer-events-none" />
-            <p className="text-amber-500 dark:text-amber-400 font-mono text-sm font-medium mb-4">
-              Let&apos;s Connect
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <div className="absolute inset-0 -m-8 rounded-3xl bg-linear-to-b from-accent/5 to-transparent pointer-events-none" />
+            <p className="text-accent font-mono text-sm font-medium mb-4">Let&apos;s Connect</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-content mb-4">
               Let&apos;s work together
             </h2>
-            <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed mb-8">
+            <p className="text-content-muted text-lg leading-relaxed mb-8">
               I&apos;m always open to new opportunities and interesting projects.
               Let&apos;s build something great.
             </p>
-            <Link
-              href="/about#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold text-base transition-all hover:shadow-xl hover:shadow-amber-500/25 active:scale-95"
-            >
+            <Link href="/about#contact"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent hover:bg-accent-hover text-accent-fg font-semibold text-base transition-all hover:shadow-xl hover:shadow-accent/25 active:scale-95">
               Start a Conversation
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
           </div>
