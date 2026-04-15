@@ -1,5 +1,7 @@
 'use server'
 
+import { Resend } from 'resend'
+
 export type ContactState = {
   success: boolean
   error?: string
@@ -22,33 +24,26 @@ export async function sendContact(
     return { success: false, error: 'Please enter a valid email address.' }
   }
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // TO SEND REAL EMAILS — plug in Resend (free, 3000 emails/month):
-  //
-  //   1. npm install resend
-  //   2. Get a free API key at https://resend.com
-  //   3. Add RESEND_API_KEY=re_... to your .env.local
-  //   4. Uncomment and update the block below:
-  //
-  // import { Resend } from 'resend'
-  // const resend = new Resend(process.env.RESEND_API_KEY)
-  // await resend.emails.send({
-  //   from: 'Portfolio <onboarding@resend.dev>',
-  //   to: 'YOUR_EMAIL@example.com',          // ← your real email
-  //   replyTo: email,
-  //   subject: `Portfolio contact: ${subject || name}`,
-  //   html: `
-  //     <p><strong>Name:</strong> ${name}</p>
-  //     <p><strong>Email:</strong> ${email}</p>
-  //     <p><strong>Subject:</strong> ${subject || '—'}</p>
-  //     <hr />
-  //     <p>${message.replace(/\n/g, '<br />')}</p>
-  //   `,
-  // })
-  // ─────────────────────────────────────────────────────────────────────────
+  const resend = new Resend(process.env.RESEND_API_KEY)
 
-  // Dev placeholder — logs to server console
-  console.log('[Contact form]', { name, email, subject, message })
+  const { error } = await resend.emails.send({
+    from: 'Portfolio Contact <onboarding@resend.dev>',
+    to: 'laithalwani@gmail.com',
+    replyTo: email,
+    subject: `Portfolio contact: ${subject || name}`,
+    html: `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Subject:</strong> ${subject || '—'}</p>
+      <hr />
+      <p>${message.replace(/\n/g, '<br />')}</p>
+    `,
+  })
+
+  if (error) {
+    console.error('[Contact form] Resend error:', error)
+    return { success: false, error: 'Failed to send message. Please try again.' }
+  }
 
   return { success: true }
 }
